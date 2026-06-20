@@ -123,13 +123,43 @@ Mercado Extra,pagamento,Alimentação,150,2026-06-02
 
 ## Imagens do sistema
 
-Adicione nesta seção imagens da página inicial, dashboard, movimentações, importação e relatórios.
+### Dashboard inteligente
 
-Exemplo:
+Visão geral do fluxo de caixa, com total recebido, total pago, saldo final, gráficos financeiros e últimas movimentações.
 
-```markdown
-![Dashboard da Syncrypta](imagens/dashboard.png)
-```
+![Dashboard inteligente da Syncrypta](imagens/dashboard.png)
+
+---
+
+### Receitas e pagamentos
+
+Tela utilizada para cadastrar, editar, visualizar e excluir receitas e pagamentos.
+
+![Tela de receitas e pagamentos](imagens/movimentacoes.png)
+
+---
+
+### Importação de arquivos CSV
+
+Área responsável pela importação de movimentações financeiras através de arquivos CSV.
+
+![Tela de importação CSV](imagens/importacao.png)
+
+---
+
+### Relatório de fluxo de caixa
+
+Resumo financeiro das movimentações cadastradas, com opção de exportação do relatório.
+
+![Relatório de fluxo de caixa](imagens/relatorios.png)
+
+---
+
+### Planos de assinatura
+
+Seleção entre os planos Básico, Profissional e Empresarial da plataforma.
+
+![Planos de assinatura da Syncrypta](imagens/planos.png)
 
 ---
 
