@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Importar CSV - Syncrypta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="protegerPagina();">
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <div>
+      <div class="logo">
+        <span>S</span>
+        <div>
+          <h1>Syncrypta</h1>
+          <p>Sistema Integrado</p>
+        </div>
+      </div>
+
+      <div class="menu-lateral">
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="movimentacoes.html">💳 Receitas e Pagamentos</a>
+        <a class="ativo" href="importacao.html">📁 Importar CSV</a>
+        <a href="relatorios.html">📈 Relatórios</a>
+      </div>
+    </div>
+
+    <div class="sidebar-baixo">
+      <div class="notificacao-box">
+        <div class="linha-notificacao" onclick="abrirNotificacoes()">
+          <div class="sino">🔔<span id="contadorNotificacoes">0</span></div>
+          <div>
+            <strong>Notificações</strong>
+            <p id="textoNotificacoes">Carregando...</p>
+          </div>
+        </div>
+
+        <div class="plano-box" onclick="abrirModalPlano()">
+          <div class="avatar-plano" id="avatarPlano">TC</div>
+          <div>
+            <strong id="nomePlanoAtual">Syncrypta Básico</strong>
+            <p>Clique para alterar</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="botao-sair" onclick="sair()">Sair</button>
+    </div>
+  </aside>
+
+  <main class="conteudo">
+    <h2>Importar Planilha CSV</h2>
+    <p class="subtitulo">Importe movimentações financeiras de uma planilha.</p>
+
+    <section class="painel">
+      <h3>Formato esperado</h3>
+      <p>O arquivo CSV precisa ter as colunas:</p>
+
+      <pre>Descricao,Tipo,Categoria,Valor,Data</pre>
+      <pre>PIX Cliente,Receita,Receita,1200,2026-06-01</pre>
+      <pre>Mercado Extra,Pagamento,Alimentação,150,2026-06-02</pre>
+    </section>
+
+    <section class="painel">
+      <h3>Enviar arquivo</h3>
+      <input type="file" id="arquivoCsv" accept=".csv">
+      <button onclick="importarCsv()">Importar CSV</button>
+    </section>
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

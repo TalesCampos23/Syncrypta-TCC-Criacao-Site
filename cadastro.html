@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Syncrypta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="auth-page">
+  <div class="auth-card">
+    <div class="logo">
+      <span>S</span>
+      <div>
+        <h1>Syncrypta</h1>
+        <p>Crie sua conta</p>
+      </div>
+    </div>
+
+    <h2>Cadastro</h2>
+
+    <form id="formCadastro">
+      <input type="text" id="nomeCadastro" placeholder="Nome completo" required>
+      <input type="email" id="emailCadastro" placeholder="Email" required>
+      <input type="password" id="senhaCadastro" placeholder="Senha" required>
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <p class="auth-link">Já tem conta? <a href="login.html">Entrar</a></p>
+    <p class="auth-link"><a href="index.html">Voltar ao início</a></p>
+  </div>
+</section>
+
+<script>
+let formCadastro = document.getElementById('formCadastro')
+
+formCadastro.addEventListener('submit', async function(event) {
+    event.preventDefault()
+
+    let nome = document.getElementById('nomeCadastro').value.trim()
+    let email = document.getElementById('emailCadastro').value.trim()
+    let senha = document.getElementById('senhaCadastro').value.trim()
+
+    if (nome == '' || email == '' || senha == '') {
+        alert('Preencha todos os campos')
+        return
+    }
+
+    try {
+        let resposta = await fetch('http://localhost:3000/api/cadastro', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                nome: nome,
+                email: email,
+                senha: senha
+            })
+        })
+
+        let dados = await resposta.json()
+
+        if (resposta.ok) {
+            window.location.href = './login.html'
+            return
+        }
+
+        alert(dados.mensagem)
+
+    } catch (erro) {
+        alert('Erro ao conectar com o servidor. Verifique se o backend está ligado.')
+    }
+})
+</script>
+</script>
+</body>
+</html>

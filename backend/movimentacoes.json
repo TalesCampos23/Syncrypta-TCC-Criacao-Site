@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1781098461583,
+    "usuarioId": 1781087813151,
+    "descricao": "PIX Cliente",
+    "tipo": "receita",
+    "categoria": "Receita",
+    "valor": 12000,
+    "data": "2026-06-01"
+  },
+  {
+    "id": 1781098966414,
+    "usuarioId": 1781087813151,
+    "descricao": "PIX Cliente",
+    "tipo": "receita",
+    "categoria": "Receita",
+    "valor": 1200,
+    "data": "2026-06-01"
+  },
+  {
+    "id": 1781098966146,
+    "usuarioId": 1781087813151,
+    "descricao": "Mercado Extra",
+    "tipo": "pagamento",
+    "categoria": "Alimentação",
+    "valor": 150,
+    "data": "2026-06-02"
+  },
+  {
+    "id": 1781098965943,
+    "usuarioId": 1781087813151,
+    "descricao": "Posto Shell",
+    "tipo": "pagamento",
+    "categoria": "Transporte",
+    "valor": 80,
+    "data": "2026-06-03"
+  },
+  {
+    "id": 1781098966166,
+    "usuarioId": 1781087813151,
+    "descricao": "Conta de Luz",
+    "tipo": "pagamento",
+    "categoria": "Moradia",
+    "valor": 210,
+    "data": "2026-06-04"
+  },
+  {
+    "id": 1781098965815,
+    "usuarioId": 1781087813151,
+    "descricao": "Internet",
+    "tipo": "pagamento",
+    "categoria": "Serviços",
+    "valor": 120,
+    "data": "2026-06-05"
+  },
+  {
+    "id": 1781102917575,
+    "usuarioId": 1781102822753,
+    "descricao": "PIX Cliente",
+    "tipo": "receita",
+    "categoria": "Receita",
+    "valor": 1200,
+    "data": "2026-06-01"
+  },
+  {
+    "id": 1781102917600,
+    "usuarioId": 1781102822753,
+    "descricao": "Mercado Extra",
+    "tipo": "pagamento",
+    "categoria": "Alimentação",
+    "valor": 150,
+    "data": "2026-06-02"
+  },
+  {
+    "id": 1781102917703,
+    "usuarioId": 1781102822753,
+    "descricao": "Posto Shell",
+    "tipo": "pagamento",
+    "categoria": "Transporte",
+    "valor": 80,
+    "data": "2026-06-03"
+  },
+  {
+    "id": 1781102917334,
+    "usuarioId": 1781102822753,
+    "descricao": "Conta de Luz",
+    "tipo": "pagamento",
+    "categoria": "Moradia",
+    "valor": 210,
+    "data": "2026-06-04"
+  },
+  {
+    "id": 1781102917875,
+    "usuarioId": 1781102822753,
+    "descricao": "Internet",
+    "tipo": "pagamento",
+    "categoria": "Serviços",
+    "valor": 120,
+    "data": "2026-06-05"
+  },
+  {
+    "id": 1781111141909,
+    "usuarioId": 1781102822753,
+    "descricao": "Imposto",
+    "tipo": "receita",
+    "categoria": "Transporte",
+    "valor": 1212,
+    "data": "2026-06-12"
+  }
+]
