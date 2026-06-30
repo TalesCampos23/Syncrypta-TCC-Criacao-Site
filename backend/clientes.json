@@ -1,0 +1,42 @@
+[
+  {
+    "id": 920001,
+    "usuarioId": 900001,
+    "nome": "Alfa Consultoria",
+    "perfilFinanceiro": "pj",
+    "segmento": "Serviços profissionais",
+    "status": "Ativo",
+    "modoVisual": "barras",
+    "criadoEm": "2026-06-30T15:30:37.927Z"
+  },
+  {
+    "id": 920002,
+    "usuarioId": 900001,
+    "nome": "Profissional Autônomo Demo",
+    "perfilFinanceiro": "pf",
+    "segmento": "Trabalho por aplicativo",
+    "status": "Ativo",
+    "modoVisual": "rosca",
+    "criadoEm": "2026-06-30T15:30:37.927Z"
+  },
+  {
+    "id": 920003,
+    "usuarioId": 900001,
+    "nome": "Studio Horizonte",
+    "perfilFinanceiro": "pj",
+    "segmento": "MEI criativo",
+    "status": "Ativo",
+    "modoVisual": "linhas",
+    "criadoEm": "2026-06-30T15:30:37.927Z"
+  },
+  {
+    "id": 920101,
+    "usuarioId": 900002,
+    "nome": "Meu fluxo pessoal",
+    "perfilFinanceiro": "pf",
+    "segmento": "Pessoa física",
+    "status": "Ativo",
+    "modoVisual": "rosca",
+    "criadoEm": "2026-06-30T15:30:37.927Z"
+  }
+]

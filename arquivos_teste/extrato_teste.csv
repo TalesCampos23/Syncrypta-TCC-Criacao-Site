@@ -1,0 +1,6 @@
+Descricao,Tipo,Categoria,Subcategoria,Valor,Data,Contraparte,CentroCusto,Conta
+PIX Cliente Alfa,receita,Receita,Serviços prestados,2500,2026-06-03,Cliente Alfa,Comercial,Conta principal
+Posto Shell,pagamento,,,280,2026-06-05,Shell,Operações,Cartão corporativo
+Mercado Central,pagamento,,,460,2026-06-08,Mercado Central,Administrativo,Cartão corporativo
+Conta de luz Enel,pagamento,,,510,2026-06-12,Enel,Administrativo,Conta principal
+Software de gestão,pagamento,Tecnologia,SaaS,330,2026-06-15,Cloud Software,Tecnologia,Cartão corporativo

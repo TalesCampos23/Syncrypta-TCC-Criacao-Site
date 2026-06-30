@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1782834173747,
+    "usuarioId": 900001,
+    "acao": "DEFINIU_SALDO_INICIAL",
+    "entidade": "saldo",
+    "detalhes": {
+      "clienteId": "",
+      "mes": "2026-06",
+      "valor": 0
+    },
+    "dataHora": "2026-06-30T15:42:53.409Z"
+  },
+  {
+    "id": 1782834157722,
+    "usuarioId": 900001,
+    "acao": "DEFINIU_SALDO_INICIAL",
+    "entidade": "saldo",
+    "detalhes": {
+      "clienteId": "",
+      "mes": "2026-06",
+      "valor": 20000
+    },
+    "dataHora": "2026-06-30T15:42:36.794Z"
+  },
+  {
+    "id": 1782834143454,
+    "usuarioId": 900001,
+    "acao": "DEFINIU_SALDO_INICIAL",
+    "entidade": "saldo",
+    "detalhes": {
+      "clienteId": "",
+      "mes": "2026-06",
+      "valor": 0
+    },
+    "dataHora": "2026-06-30T15:42:22.754Z"
+  },
+  {
+    "id": 1782834136441,
+    "usuarioId": 900001,
+    "acao": "DEFINIU_SALDO_INICIAL",
+    "entidade": "saldo",
+    "detalhes": {
+      "clienteId": "",
+      "mes": "2026-06",
+      "valor": 1000000
+    },
+    "dataHora": "2026-06-30T15:42:15.739Z"
+  },
+  {
+    "id": 1782834074348,
+    "usuarioId": 900001,
+    "acao": "LOGIN",
+    "entidade": "sessao",
+    "detalhes": {},
+    "dataHora": "2026-06-30T15:41:14.251Z"
+  },
+  {
+    "id": 1782833669522,
+    "usuarioId": 900001,
+    "acao": "LOGIN",
+    "entidade": "sessao",
+    "detalhes": {},
+    "dataHora": "2026-06-30T15:34:29.264Z"
+  },
+  {
+    "id": 1782833664706,
+    "usuarioId": 900002,
+    "acao": "LOGIN",
+    "entidade": "sessao",
+    "detalhes": {},
+    "dataHora": "2026-06-30T15:34:24.071Z"
+  },
+  {
+    "id": 1782833659243,
+    "usuarioId": 900001,
+    "acao": "LOGIN",
+    "entidade": "sessao",
+    "detalhes": {},
+    "dataHora": "2026-06-30T15:34:18.429Z"
+  },
+  {
+    "id": 960001,
+    "usuarioId": 900001,
+    "acao": "SEED_DEMO",
+    "entidade": "sistema",
+    "detalhes": {
+      "versao": "4.0"
+    },
+    "dataHora": "2026-06-30T15:30:37.930Z"
+  }
+]

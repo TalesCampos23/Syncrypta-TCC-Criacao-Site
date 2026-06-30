@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Login - Syncrypta</title><link rel="stylesheet" href="style.css"></head>
-<body>
-<section class="auth-page">
-  <div class="auth-card">
-    <div class="logo"><span>S</span><div><h1>Syncrypta</h1><p>Acesse sua conta</p></div></div>
-    <h2>Login</h2>
-    <form id="formLogin">
-      <input type="email" id="emailLogin" placeholder="Email">
-      <input type="password" id="senhaLogin" placeholder="Senha">
-      <button type="submit">Entrar</button>
-    </form>
-    <p class="auth-link">Não tem conta? <a href="cadastro.html">Cadastrar</a></p>
-    <p class="auth-link"><a href="index.html">Voltar ao início</a></p>
-  </div>
-</section>
-<script src="script.js"></script>
-</body>
-</html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Entrar | Syncrypta</title><link rel="stylesheet" href="style.css?v=4.0.2"></head>
+<body data-page="login">
+<div class="auth-layout">
+  <section class="auth-showcase">
+    <a class="brand" href="index.html"><span class="brand-mark">S</span><span class="brand-copy"><strong>Syncrypta</strong><small>Contabilidade inteligente</small></span></a>
+    <div class="auth-showcase-content"><span class="eyebrow" style="color:#7de9fa">Acesso seguro</span><h1>Seu fluxo de caixa, pronto para decisões.</h1><p>Entre para acompanhar resultados, importar movimentações, gerar relatórios e testar experiências de plano.</p><div class="auth-benefits"><div class="auth-benefit"><span data-icon="shield"></span> Rotas protegidas</div><div class="auth-benefit"><span data-icon="dashboard"></span> Painel executivo</div><div class="auth-benefit"><span data-icon="sparkles"></span> Regras inteligentes</div><div class="auth-benefit"><span data-icon="receipt"></span> Relatórios gerenciais</div></div></div>
+    <small style="color:#7691a4">Projeto TCC • FIAP School • Syncrypta 4.0</small>
+  </section>
+  <main class="auth-form-area">
+    <section class="auth-card">
+      <a class="brand" href="index.html"><span class="brand-mark">S</span><span class="brand-copy"><strong>Syncrypta</strong><small>Área do cliente</small></span></a>
+      <h2>Bem-vindo de volta</h2><p>Use sua conta para acessar o ambiente financeiro.</p>
+      <form class="auth-form" id="formLogin">
+        <div class="input-group"><label for="emailLogin">E-mail</label><input class="input" type="email" id="emailLogin" placeholder="voce@empresa.com" required autocomplete="email"></div>
+        <div class="input-group"><label for="senhaLogin">Senha</label><input class="input" type="password" id="senhaLogin" placeholder="Sua senha" required autocomplete="current-password"></div>
+        <button class="button button-primary button-full" type="submit"><span data-icon="lock"></span> Entrar com segurança</button>
+      </form>
+      <div class="auth-divider">acessos demonstrativos</div>
+      <div class="demo-access-grid"><button class="demo-access" type="button" onclick="preencherAcessoDemo('cliente')"><span class="user-avatar">TC</span><span><strong>Cliente TCC</strong><small>Alterna todos os planos</small></span></button><button class="demo-access" type="button" onclick="preencherAcessoDemo('usuario')"><span class="user-avatar">UD</span><span><strong>Usuário comum</strong><small>Testa o checkout</small></span></button></div>
+      <p class="auth-footer-link">Ainda não tem conta? <a href="cadastro.html">Criar conta gratuita</a></p>
+    </section>
+  </main>
+</div><script src="script.js?v=4.0.2"></script></body></html>

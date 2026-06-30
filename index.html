@@ -1,33 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Syncrypta - Início</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Syncrypta — controle inteligente de fluxo de caixa para empresas e profissionais.">
+  <title>Syncrypta — Contabilidade inteligente. Segurança real.</title>
+  <link rel="stylesheet" href="style.css?v=4.0.2">
 </head>
-<body>
-<header class="topo">
-  <div class="logo"><span>S</span><div><h1>Syncrypta</h1><p>Contabilidade inteligente. Segurança real.</p></div></div>
-  <nav><a href="index.html">Início</a><a href="login.html">Login</a><a href="cadastro.html">Cadastro</a></nav>
-</header>
-<section class="hero">
-  <div class="circulo circulo-topo"></div><div class="circulo circulo-baixo"></div>
-  <div class="hero-texto">
-    <p class="tag">Projeto TCC</p>
-    <h2>Controle inteligente de fluxo de caixa</h2>
-    <p>A Syncrypta transforma extratos, faturas e planilhas em dashboards financeiros com receitas, pagamentos, categorias e saldo final.</p>
-    <div class="botoes"><a class="botao" href="cadastro.html">Criar conta</a><a class="botao secundario" href="login.html">Entrar</a></div>
-  </div>
-</section>
-<section class="secao">
-  <h2>Funcionalidades principais</h2>
-  <div class="cards">
-    <div class="card"><h3>Receitas e pagamentos</h3><p>Cadastre entradas e saídas do caixa.</p></div>
-    <div class="card"><h3>Dashboard</h3><p>Veja total recebido, total pago e saldo final.</p></div>
-    <div class="card"><h3>Importação CSV</h3><p>Importe dados de planilhas exportadas do Excel.</p></div>
-  </div>
-</section>
-<footer><h2>Syncrypta</h2><p>Projeto para o desafio da contadora Thaís Calça.</p></footer>
+<body class="landing-body" data-page="landing">
+  <header class="landing-header">
+    <a class="brand" href="index.html"><span class="brand-mark">S</span><span class="brand-copy"><strong>Syncrypta</strong><small>Contabilidade inteligente</small></span></a>
+    <nav class="landing-nav"><a href="#solucao">Solução</a><a href="#como-funciona">Como funciona</a><a href="#seguranca">Segurança</a><a href="#planos">Planos</a></nav>
+    <div class="landing-actions"><a class="button button-ghost" href="login.html">Entrar</a><a class="button button-primary" href="cadastro.html">Começar agora</a></div>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-copy">
+      <div class="hero-badge"><span data-icon="sparkles"></span> Projeto TCC • FIAP School</div>
+      <h1>Do dado financeiro bruto à <span>decisão inteligente.</span></h1>
+      <p>A Syncrypta recebe extratos e planilhas, organiza receitas e pagamentos, identifica categorias e transforma tudo em uma visão executiva do fluxo de caixa.</p>
+      <div class="hero-actions"><a class="button button-primary" href="cadastro.html"><span data-icon="plus"></span> Criar conta gratuita</a><a class="button button-light" href="login.html">Explorar demonstração</a></div>
+      <div class="hero-proof"><span><span data-icon="check"></span> CSV, Excel e OFX</span><span><span data-icon="check"></span> Dashboards gerenciais</span><span><span data-icon="check"></span> Segurança e auditoria</span></div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-glow"></div>
+      <div class="product-window">
+        <div class="product-window-inner">
+          <div class="product-window-top"><span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span></div>
+          <div class="product-window-body">
+            <div class="mock-header"><div><small>Visão executiva</small><h3>Fluxo de caixa</h3></div><span class="mock-badge">Saudável</span></div>
+            <div class="mock-metrics"><div class="mock-metric"><span>Recebido</span><strong>R$ 18.420</strong></div><div class="mock-metric"><span>Pago</span><strong>R$ 11.280</strong></div><div class="mock-metric"><span>Saldo</span><strong>R$ 7.140</strong></div></div>
+            <div class="mock-chart"><span style="height:45%"></span><span style="height:28%"></span><span style="height:63%"></span><span style="height:38%"></span><span style="height:78%"></span><span style="height:49%"></span><span style="height:90%"></span><span style="height:58%"></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="float-card one"><strong>Classificação automática</strong><span>Mercado → Alimentação</span></div>
+      <div class="float-card two"><strong>Projeção positiva</strong><span>+ R$ 3.680 no próximo período</span></div>
+    </div>
+  </section>
+
+  <section class="landing-section" id="solucao">
+    <div class="section-heading"><span class="eyebrow">Produto</span><h2>Uma camada operacional antes do BI</h2><p>Além de visualizar, a Syncrypta recebe, organiza, classifica, corrige, registra e acompanha os dados financeiros.</p></div>
+    <div class="feature-grid">
+      <article class="feature-card"><div class="feature-icon"><span data-icon="upload"></span></div><h3>Entrada multiformato</h3><p>Importação funcional de CSV, Excel (.xlsx) e OFX, com PDF previsto para uma etapa futura.</p></article>
+      <article class="feature-card"><div class="feature-icon"><span data-icon="sparkles"></span></div><h3>Classificação adaptativa</h3><p>Regras aprendidas a partir de descrições e correções realizadas pelo usuário.</p></article>
+      <article class="feature-card"><div class="feature-icon"><span data-icon="dashboard"></span></div><h3>Visão gerencial</h3><p>Saldo, descasamento, saúde financeira, categorias e projeção em um único painel.</p></article>
+      <article class="feature-card"><div class="feature-icon"><span data-icon="users"></span></div><h3>Carteira de clientes</h3><p>Perfis de pessoa física e jurídica sem armazenar CPF, cartão ou outros dados sensíveis.</p></article>
+      <article class="feature-card"><div class="feature-icon"><span data-icon="receipt"></span></div><h3>Relatórios executivos</h3><p>Exportação CSV e Excel, análise por categoria, subcategoria e período mensal.</p></article>
+      <article class="feature-card"><div class="feature-icon"><span data-icon="shield"></span></div><h3>Governança e auditoria</h3><p>Controle de acesso, autenticação, trilha de ações e proteção do ambiente.</p></article>
+    </div>
+  </section>
+
+  <section class="landing-section alt" id="como-funciona">
+    <div class="section-heading"><span class="eyebrow">Fluxo inteligente</span><h2>Da importação ao relatório em cinco etapas</h2></div>
+    <div class="flow-grid">
+      <article class="flow-step"><span>1</span><h3>Entrada</h3><p>Usuário envia extrato bancário, fatura ou planilha.</p></article>
+      <article class="flow-step"><span>2</span><h3>Leitura</h3><p>Dados são validados e normalizados.</p></article>
+      <article class="flow-step"><span>3</span><h3>Classificação</h3><p>Receitas, pagamentos e categorias são identificados.</p></article>
+      <article class="flow-step"><span>4</span><h3>Aprendizado</h3><p>O usuário confirma ou corrige e o sistema aprende a regra.</p></article>
+      <article class="flow-step"><span>5</span><h3>Decisão</h3><p>Dashboard e relatório apoiam a gestão.</p></article>
+    </div>
+  </section>
+
+  <section class="landing-section" id="seguranca">
+    <div class="security-band">
+      <div><span class="eyebrow" style="color:#78e8f8">Segurança por projeto</span><h2>Confiança para dados financeiros.</h2><p style="margin-top:14px;color:#bfd3e0">A versão acadêmica demonstra práticas aplicáveis a uma solução real, com autenticação, proteção de rotas, limitação de tentativas e auditoria.</p></div>
+      <div class="security-grid">
+        <article class="security-item"><span data-icon="lock"></span><strong>Senhas com bcrypt</strong><p>Hash específico para armazenamento seguro de credenciais.</p></article>
+        <article class="security-item"><span data-icon="shield"></span><strong>JWT e perfis</strong><p>Sessões autenticadas e recursos liberados conforme plano e perfil.</p></article>
+        <article class="security-item"><span data-icon="clock"></span><strong>Trilha de auditoria</strong><p>Registro de login, criação, edição, exclusão e importação.</p></article>
+        <article class="security-item"><span data-icon="balance"></span><strong>Governança</strong><p>Separação de dados por usuário e validação no backend.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="landing-section alt" id="planos">
+    <div class="section-heading"><span class="eyebrow">Modelo SaaS</span><h2>Planos que acompanham a evolução do cliente</h2><p>Na demonstração, o pagamento é simulado e nenhuma cobrança real é efetuada.</p></div>
+    <div class="pricing-grid" style="max-width:1080px;margin:auto">
+      <article class="pricing-card"><div class="pricing-heading"><span class="pricing-kicker">Syncrypta</span><h3>Básico</h3><p>Organização essencial</p></div><div class="pricing-price"><strong>Grátis</strong></div><ul class="pricing-list"><li><span data-icon="check"></span> Dashboard financeiro</li><li><span data-icon="check"></span> Movimentações</li><li><span data-icon="check"></span> Importação CSV</li></ul><a class="button button-secondary button-full" href="cadastro.html">Começar</a></article>
+      <article class="pricing-card pricing-featured"><span class="pricing-ribbon">Mais escolhido</span><div class="pricing-heading"><span class="pricing-kicker">Syncrypta</span><h3>Profissional</h3><p>Inteligência para crescer</p></div><div class="pricing-price"><strong>R$ 49,90</strong><span>/mês</span></div><ul class="pricing-list"><li><span data-icon="check"></span> CSV, Excel, OFX e revisão</li><li><span data-icon="check"></span> Regras e projeção de caixa</li><li><span data-icon="check"></span> Relatórios avançados</li></ul><a class="button button-light button-full" href="cadastro.html">Escolher Profissional</a></article>
+      <article class="pricing-card"><div class="pricing-heading"><span class="pricing-kicker">Syncrypta</span><h3>Empresarial</h3><p>Governança completa</p></div><div class="pricing-price"><strong>R$ 99,90</strong><span>/mês</span></div><ul class="pricing-list"><li><span data-icon="check"></span> Auditoria</li><li><span data-icon="check"></span> Múltiplos usuários</li><li><span data-icon="check"></span> Integrações e suporte</li></ul><a class="button button-secondary button-full" href="cadastro.html">Escolher Empresarial</a></article>
+    </div>
+  </section>
+
+  <section class="landing-cta"><h2>Controle o caixa. Entenda o negócio. Decida melhor.</h2><p>Uma proposta construída para o desafio apresentado pela contadora Thais Calca e desenvolvida pelo grupo Syncrypta.</p><a class="button button-light" href="login.html">Acessar demonstração</a></section>
+  <footer class="landing-footer"><span>© 2026 Syncrypta • Projeto acadêmico FIAP School</span><span>Pagamento e integrações em ambiente demonstrativo</span></footer>
+  <script src="script.js?v=4.0.2"></script>
 </body>
 </html>

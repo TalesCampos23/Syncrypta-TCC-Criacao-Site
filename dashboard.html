@@ -1,120 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard - Syncrypta</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body onload="protegerPagina(); carregarDashboard();">
-
-<div class="layout">
-
-  <aside class="sidebar">
-    <div>
-      <div class="logo">
-        <span>S</span>
-        <div>
-          <h1>Syncrypta</h1>
-          <p>Sistema Integrado</p>
-        </div>
-      </div>
-
-      <div class="menu-lateral">
-        <a class="ativo" href="dashboard.html">📊 Dashboard</a>
-        <a href="movimentacoes.html">💳 Receitas e Pagamentos</a>
-        <a href="importacao.html">📁 Importar CSV</a>
-        <a href="relatorios.html">📈 Relatórios</a>
-      </div>
-    </div>
-
-    <div class="sidebar-baixo">
-      <div class="notificacao-box">
-        <div class="linha-notificacao" onclick="abrirNotificacoes()">
-          <div class="sino">🔔<span id="contadorNotificacoes">0</span></div>
-          <div>
-            <strong>Notificações</strong>
-            <p id="textoNotificacoes">Carregando...</p>
-          </div>
-        </div>
-
-        <div class="plano-box" onclick="abrirModalPlano()">
-          <div class="avatar-plano" id="avatarPlano">TC</div>
-          <div>
-            <strong id="nomePlanoAtual">Syncrypta Básico</strong>
-            <p>Clique para alterar</p>
-          </div>
-        </div>
-      </div>
-
-      <button class="botao-sair" onclick="sair()">Sair</button>
-    </div>
-  </aside>
-
-  <main class="conteudo">
-    <div class="barra">
-      <input type="text" placeholder="Pesquisar">
-    </div>
-
-    <h2>Dashboard Inteligente</h2>
-    <p class="subtitulo">Visão geral do fluxo de caixa.</p>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Total Recebido</h3>
-        <p id="totalRecebido">R$ 0,00</p>
-      </div>
-
-      <div class="card">
-        <h3>Total Pago</h3>
-        <p id="totalPago">R$ 0,00</p>
-      </div>
-
-      <div class="card">
-        <h3>Saldo Final</h3>
-        <p id="saldoFinal">R$ 0,00</p>
-      </div>
-    </div>
-
-    <section class="painel">
-      <h3>Gráficos Financeiros</h3>
-
-      <div class="graficos">
-        <div class="grafico-card">
-          <h4>Recebido x Pago</h4>
-          <canvas id="graficoFluxo"></canvas>
-        </div>
-
-        <div class="grafico-card">
-          <h4>Resumo por Categoria</h4>
-          <canvas id="graficoCategorias"></canvas>
-        </div>
-      </div>
-    </section>
-
-    <section class="painel">
-      <h3>Últimas movimentações</h3>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Descrição</th>
-            <th>Tipo</th>
-            <th>Categoria</th>
-            <th>Valor</th>
-            <th>Data</th>
-          </tr>
-        </thead>
-
-        <tbody id="tabelaUltimas"></tbody>
-      </table>
-    </section>
-  </main>
-
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="script.js"></script>
-</body>
-</html>
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Syncrypta 4.0 — controle inteligente e adaptativo de fluxo de caixa."><title>Dashboard inteligente | Syncrypta</title><link rel="stylesheet" href="style.css?v=4.0.2"></head><body data-page="dashboard"><div class="app-shell"><aside class="sidebar" id="appSidebar">
+      <a class="brand" href="dashboard.html"><span class="brand-mark">S</span><span class="brand-copy"><strong>Syncrypta</strong><small>Fluxo de caixa inteligente</small></span></a>
+      <div class="sidebar-section-label">Operação financeira</div>
+      <nav class="nav-list"><a class="nav-link active" href="dashboard.html"><span data-icon="dashboard"></span><span>Visão geral</span></a><a class="nav-link" href="movimentacoes.html"><span data-icon="wallet"></span><span>Movimentações</span></a><a class="nav-link" href="importacao.html"><span data-icon="upload"></span><span>Importar e revisar</span></a><a class="nav-link" href="regras.html" data-recurso="regras_automaticas"><span data-icon="sparkles"></span><span>Regras inteligentes</span><span class="nav-lock"><span data-icon="lock"></span></span></a><a class="nav-link" href="clientes.html" data-recurso="clientes"><span data-icon="users"></span><span>Perfis financeiros</span><span class="nav-lock"><span data-icon="lock"></span></span></a><a class="nav-link" href="relatorios.html"><span data-icon="chart"></span><span>Relatórios mensais</span></a><a class="nav-link" href="auditoria.html" data-recurso="auditoria"><span data-icon="shield"></span><span>Auditoria</span><span class="nav-lock"><span data-icon="lock"></span></span></a></nav>
+      <div class="sidebar-spacer"></div>
+      <button class="sidebar-notifications" onclick="abrirNotificacoes()"><span class="notification-bell"><span data-icon="bell"></span><span class="notification-count" id="contadorNotificacoes">0</span></span><span><strong>Notificações</strong><small id="resumoNotificacoes">Carregando...</small></span><span data-icon="chevron"></span></button>
+      <button class="sidebar-plan" onclick="abrirPlanos()"><span class="user-avatar" data-user-initials>US</span><span><strong>Syncrypta <span data-plan-name>Básico</span></strong><small>Gerenciar plano</small></span><span data-icon="chevron"></span></button>
+      <button class="nav-link sidebar-logout" onclick="sair()"><span data-icon="logout"></span><span>Sair da conta</span></button>
+    </aside><main class="app-main"><header class="topbar"><button class="icon-button mobile-menu-button" onclick="alternarSidebar()" aria-label="Abrir menu"><span data-icon="menu"></span></button><div class="global-search"><span data-icon="search"></span><input id="globalSearch" type="search" placeholder="Pesquisar na Syncrypta..."></div><div class="topbar-actions"><button class="icon-button" id="themeToggle" onclick="alternarTema()" aria-label="Alternar tema"></button><button class="icon-button" onclick="abrirNotificacoes()" aria-label="Notificações"><span data-icon="bell"></span></button><div class="topbar-user"><span class="user-avatar" data-user-initials>US</span><div><strong data-user-name>Usuário</strong><small data-plan-name>Básico</small></div></div></div></header><div class="page-content"><header class="page-header"><div class="page-title"><span class="eyebrow">Syncrypta 4.0 <span class="demo-badge" id="demoBadge" hidden>Modo cliente TCC</span></span><h1>Dashboard financeiro adaptativo</h1><p>Fluxo de caixa mensal com saldo inicial, projeção, revisão e visualização personalizada.</p></div><div class="page-actions"><a class="button button-primary" href="importacao.html"><span data-icon="upload"></span> Importar extrato</a></div></header><section class="context-bar"><div class="context-title"><span data-icon="filter"></span><div><strong>Contexto da análise</strong><small>Escolha perfil, período e origem dos dados</small></div></div><div class="context-controls"><div class="input-group compact"><label for="contextCliente">Perfil</label><select class="input" id="contextCliente"></select></div><div class="input-group compact"><label for="contextMes">Período</label><input class="input" type="month" id="contextMes"></div><div class="input-group compact"><label for="contextOrigem">Origem</label><select class="input" id="contextOrigem"><option value="">Todas</option><option value="conta_bancaria">Conta bancária</option><option value="cartao_credito">Cartão de crédito</option><option value="manual">Cadastro manual</option><option value="arquivo_csv">Arquivo CSV</option><option value="arquivo_excel">Planilha Excel</option><option value="arquivo_ofx">Arquivo OFX</option></select></div><div class="input-group compact"><label for="saldoInicialInput">Saldo inicial</label><input class="input" type="number" step="0.01" id="saldoInicialInput" placeholder="0,00"></div><button class="button button-secondary context-save" type="button" onclick="salvarSaldoInicial()"><span data-icon="check"></span> Salvar saldo</button></div></section><section class="metric-grid metric-grid-five">
+<article class="metric-card metric-opening"><div class="metric-top"><div><span class="metric-label">Saldo inicial</span><div class="metric-value" id="saldoInicial">R$ 0,00</div></div><span class="metric-icon"><span data-icon="calendar"></span></span></div><div class="metric-meta">Base do período selecionado</div></article>
+<article class="metric-card metric-income"><div class="metric-top"><div><span class="metric-label">Recebimentos</span><div class="metric-value" id="totalRecebido">R$ 0,00</div></div><span class="metric-icon"><span data-icon="arrowUp"></span></span></div><div class="metric-meta">Entradas consolidadas</div></article>
+<article class="metric-card metric-expense"><div class="metric-top"><div><span class="metric-label">Pagamentos</span><div class="metric-value" id="totalPago">R$ 0,00</div></div><span class="metric-icon"><span data-icon="arrowDown"></span></span></div><div class="metric-meta">Saídas do período</div></article>
+<article class="metric-card metric-balance"><div class="metric-top"><div><span class="metric-label">Saldo final</span><div class="metric-value" id="saldoFinal">R$ 0,00</div></div><span class="metric-icon"><span data-icon="wallet"></span></span></div><div class="metric-meta">Saldo inicial + entradas − saídas</div></article>
+<article class="metric-card metric-health"><div class="metric-top"><div><span class="metric-label">Saúde financeira</span><div class="metric-value" id="saudeFinanceira">0%</div></div><span class="health-ring" id="healthProgress"></span></div><div class="metric-meta">Índice gerencial do período</div></article>
+</section>
+<section class="insight-grid"><article class="insight-banner" data-recurso="previsao_caixa"><div><span class="eyebrow">Projeção baseada no histórico</span><h3>Visibilidade para os próximos meses</h3><p id="projecaoTexto">A projeção usa médias e despesas recorrentes registradas.</p></div><div class="insight-value"><strong id="projecaoSaldo">R$ 0,00</strong><span>saldo projetado para o próximo mês</span></div></article><article class="status-card"><span class="eyebrow">Descasamento de caixa</span><h3>Status do período</h3><span class="status-badge status-sem-dados" id="descasamentoBadge">Sem dados</span><p class="helper-text" id="comparacaoMes">Sem comparação disponível.</p></article></section>
+<section class="review-strip"><div><span class="eyebrow">Central de classificação</span><h3>Qualidade dos dados importados</h3></div><div class="review-kpis"><span class="review-kpi ok"><strong id="reviewConfirmadas">0</strong><small>confirmadas</small></span><span class="review-kpi suggested"><strong id="reviewSugeridas">0</strong><small>sugeridas</small></span><span class="review-kpi warning"><strong id="reviewPendentes">0</strong><small>para revisar</small></span></div><a class="button button-secondary" href="importacao.html">Revisar importações</a></section>
+<section class="dashboard-grid"><article class="panel"><div class="panel-header"><div><h2>Evolução mensal</h2><p>Recebimentos, pagamentos e tendência histórica</p></div><select class="input chart-selector" id="chartTypeSelector"><option value="bar">Barras</option><option value="line">Linhas</option></select></div><div class="chart-container"><canvas id="graficoFluxoMensal"></canvas></div></article><article class="panel"><div class="panel-header"><div><h2>Gastos por categoria</h2><p>Escolha a visualização que preferir</p></div><select class="input chart-selector" id="categoryChartType"><option value="doughnut">Rosca</option><option value="pie">Pizza</option><option value="bar">Barras</option></select></div><div class="chart-container small"><canvas id="graficoCategorias"></canvas></div></article></section>
+<section class="dashboard-grid"><article class="panel"><div class="panel-header"><div><h2>Próximos três meses</h2><p>Projeção demonstrativa com base no histórico</p></div></div><div class="projection-timeline" id="projectionTimeline"></div><div class="recurring-list" id="recurringList"></div></article><article class="panel"><div class="panel-header"><div><h2>Alertas e exceções</h2><p>Movimentações fora do padrão</p></div></div><div id="outlierList" class="notification-list"></div></article></section>
+<section class="panel"><div class="panel-header"><div><h2>Últimas movimentações</h2><p>Dados do contexto selecionado</p></div><a class="button button-ghost" href="movimentacoes.html">Ver todas <span data-icon="chevron"></span></a></div><div class="table-wrap"><table class="data-table"><thead><tr><th>Descrição</th><th>Classificação</th><th>Origem</th><th>Valor</th><th>Data</th><th>Status</th></tr></thead><tbody id="tabelaUltimas"></tbody></table></div></section></div></main></div><script src="vendor/chart.umd.js?v=4.0.2"></script><script src="script.js?v=4.0.2"></script></body></html>

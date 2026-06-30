@@ -1,69 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Relatórios - Syncrypta</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body onload="protegerPagina(); carregarRelatorio();">
-
-<div class="layout">
-
-  <aside class="sidebar">
-    <div>
-      <div class="logo">
-        <span>S</span>
-        <div>
-          <h1>Syncrypta</h1>
-          <p>Sistema Integrado</p>
-        </div>
-      </div>
-
-      <div class="menu-lateral">
-        <a href="dashboard.html">📊 Dashboard</a>
-        <a href="movimentacoes.html">💳 Receitas e Pagamentos</a>
-        <a href="importacao.html">📁 Importar CSV</a>
-        <a class="ativo" href="relatorios.html">📈 Relatórios</a>
-      </div>
-    </div>
-
-    <div class="sidebar-baixo">
-      <div class="notificacao-box">
-        <div class="linha-notificacao" onclick="abrirNotificacoes()">
-          <div class="sino">🔔<span id="contadorNotificacoes">0</span></div>
-          <div>
-            <strong>Notificações</strong>
-            <p id="textoNotificacoes">Carregando...</p>
-          </div>
-        </div>
-
-        <div class="plano-box" onclick="abrirModalPlano()">
-          <div class="avatar-plano" id="avatarPlano">TC</div>
-          <div>
-            <strong id="nomePlanoAtual">Syncrypta Básico</strong>
-            <p>Clique para alterar</p>
-          </div>
-        </div>
-      </div>
-
-      <button class="botao-sair" onclick="sair()">Sair</button>
-    </div>
-  </aside>
-
-  <main class="conteudo">
-    <h2>Relatório de Fluxo de Caixa</h2>
-    <p class="subtitulo">Resumo financeiro gerado com base nas movimentações cadastradas.</p>
-
-    <section class="painel">
-      <div id="relatorioFinal"></div>
-      <button onclick="exportarCsv()">Exportar relatório CSV</button>
-    </section>
-  </main>
-
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Syncrypta 4.0 — controle inteligente e adaptativo de fluxo de caixa."><title>Relatório mensal | Syncrypta</title><link rel="stylesheet" href="style.css?v=4.0.2"></head><body data-page="relatorios"><div class="app-shell"><aside class="sidebar" id="appSidebar">
+      <a class="brand" href="dashboard.html"><span class="brand-mark">S</span><span class="brand-copy"><strong>Syncrypta</strong><small>Fluxo de caixa inteligente</small></span></a>
+      <div class="sidebar-section-label">Operação financeira</div>
+      <nav class="nav-list"><a class="nav-link" href="dashboard.html"><span data-icon="dashboard"></span><span>Visão geral</span></a><a class="nav-link" href="movimentacoes.html"><span data-icon="wallet"></span><span>Movimentações</span></a><a class="nav-link" href="importacao.html"><span data-icon="upload"></span><span>Importar e revisar</span></a><a class="nav-link" href="regras.html" data-recurso="regras_automaticas"><span data-icon="sparkles"></span><span>Regras inteligentes</span><span class="nav-lock"><span data-icon="lock"></span></span></a><a class="nav-link" href="clientes.html" data-recurso="clientes"><span data-icon="users"></span><span>Perfis financeiros</span><span class="nav-lock"><span data-icon="lock"></span></span></a><a class="nav-link active" href="relatorios.html"><span data-icon="chart"></span><span>Relatórios mensais</span></a><a class="nav-link" href="auditoria.html" data-recurso="auditoria"><span data-icon="shield"></span><span>Auditoria</span><span class="nav-lock"><span data-icon="lock"></span></span></a></nav>
+      <div class="sidebar-spacer"></div>
+      <button class="sidebar-notifications" onclick="abrirNotificacoes()"><span class="notification-bell"><span data-icon="bell"></span><span class="notification-count" id="contadorNotificacoes">0</span></span><span><strong>Notificações</strong><small id="resumoNotificacoes">Carregando...</small></span><span data-icon="chevron"></span></button>
+      <button class="sidebar-plan" onclick="abrirPlanos()"><span class="user-avatar" data-user-initials>US</span><span><strong>Syncrypta <span data-plan-name>Básico</span></strong><small>Gerenciar plano</small></span><span data-icon="chevron"></span></button>
+      <button class="nav-link sidebar-logout" onclick="sair()"><span data-icon="logout"></span><span>Sair da conta</span></button>
+    </aside><main class="app-main"><header class="topbar"><button class="icon-button mobile-menu-button" onclick="alternarSidebar()" aria-label="Abrir menu"><span data-icon="menu"></span></button><div class="global-search"><span data-icon="search"></span><input id="globalSearch" type="search" placeholder="Pesquisar na Syncrypta..."></div><div class="topbar-actions"><button class="icon-button" id="themeToggle" onclick="alternarTema()" aria-label="Alternar tema"></button><button class="icon-button" onclick="abrirNotificacoes()" aria-label="Notificações"><span data-icon="bell"></span></button><div class="topbar-user"><span class="user-avatar" data-user-initials>US</span><div><strong data-user-name>Usuário</strong><small data-plan-name>Básico</small></div></div></div></header><div class="page-content"><header class="page-header"><div class="page-title"><span class="eyebrow">Syncrypta 4.0 <span class="demo-badge" id="demoBadge" hidden>Modo cliente TCC</span></span><h1>Relatório mensal de fluxo de caixa</h1><p>Resumo visual para pessoa física e detalhamento exportável para pessoa jurídica.</p></div><div class="page-actions"><button class="button button-secondary" onclick="imprimirRelatorio()"><span data-icon="file"></span> Imprimir / PDF</button><button class="button button-primary" onclick="exportarExcel()"><span data-icon="download"></span> Exportar Excel</button></div></header><section class="context-bar"><div class="context-title"><span data-icon="filter"></span><div><strong>Contexto da análise</strong><small>Escolha perfil, período e origem dos dados</small></div></div><div class="context-controls"><div class="input-group compact"><label for="relatorioCliente">Perfil</label><select class="input" id="relatorioCliente"></select></div><div class="input-group compact"><label for="relatorioMes">Período</label><input class="input" type="month" id="relatorioMes"></div><div class="input-group compact"><label for="relatorioOrigem">Origem</label><select class="input" id="relatorioOrigem"><option value="">Todas</option><option value="conta_bancaria">Conta bancária</option><option value="cartao_credito">Cartão de crédito</option><option value="manual">Cadastro manual</option><option value="arquivo_csv">Arquivo CSV</option><option value="arquivo_excel">Planilha Excel</option><option value="arquivo_ofx">Arquivo OFX</option></select></div></div></section><section class="metric-grid"><article class="metric-card metric-opening"><span class="metric-label">Saldo inicial</span><div class="metric-value" id="relatorioSaldoInicial">R$ 0,00</div></article><article class="metric-card metric-income"><span class="metric-label">Recebimentos</span><div class="metric-value" id="relatorioRecebido">R$ 0,00</div></article><article class="metric-card metric-expense"><span class="metric-label">Pagamentos</span><div class="metric-value" id="relatorioPago">R$ 0,00</div></article><article class="metric-card metric-balance"><span class="metric-label">Saldo final</span><div class="metric-value" id="relatorioSaldo">R$ 0,00</div></article></section><section class="manager-summary"><div><span class="eyebrow">Leitura gerencial</span><h2>Resumo do período</h2><p id="managerInsight">Carregando análise...</p></div><div class="comparison-card"><span>Comparação com mês anterior</span><strong id="relatorioVariacao">0%</strong><small id="relatorioMesAnterior">Sem referência</small></div></section><section class="dashboard-grid"><article class="panel"><div class="panel-header"><div><h2>Gastos por categoria</h2><p>Visão resumida e visual</p></div></div><div class="table-wrap"><table class="data-table"><thead><tr><th>Categoria</th><th>Valor</th><th>Participação</th><th>%</th></tr></thead><tbody id="relatorioCategorias"></tbody></table></div></article><article class="panel"><div class="panel-header"><div><h2>Detalhamento por subcategoria</h2><p>Mais profundidade para pessoa jurídica</p></div></div><div class="table-wrap"><table class="data-table"><thead><tr><th>Classificação</th><th>Valor</th></tr></thead><tbody id="relatorioSubcategorias"></tbody></table></div></article></section><section class="dashboard-grid"><article class="panel"><div class="panel-header"><div><h2>Projeção dos próximos meses</h2><p>Estimativa baseada no histórico</p></div></div><div class="projection-timeline" id="relatorioProjecoes"></div></article><article class="panel"><div class="panel-header"><div><h2>Gastos fora do padrão</h2><p>Valores acima da média do período</p></div></div><div id="relatorioOutliers" class="notification-list"></div></article></section><section class="panel"><div class="panel-header"><div><h2>Movimentações do período</h2><p>Base completa para conferência e exportação</p></div><div class="panel-actions"><button class="button button-ghost" onclick="exportarCsv()">CSV</button><button class="button button-secondary" onclick="exportarExcel()">Excel</button></div></div><div class="table-wrap"><table class="data-table"><thead><tr><th>Data</th><th>Descrição</th><th>Tipo</th><th>Categoria / subcategoria</th><th>Origem</th><th>Valor</th></tr></thead><tbody id="relatorioMovimentacoes"></tbody></table></div></section></div></main></div><script src="script.js?v=4.0.2"></script></body></html>

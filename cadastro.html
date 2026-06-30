@@ -1,79 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro - Syncrypta</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<section class="auth-page">
-  <div class="auth-card">
-    <div class="logo">
-      <span>S</span>
-      <div>
-        <h1>Syncrypta</h1>
-        <p>Crie sua conta</p>
-      </div>
-    </div>
-
-    <h2>Cadastro</h2>
-
-    <form id="formCadastro">
-      <input type="text" id="nomeCadastro" placeholder="Nome completo" required>
-      <input type="email" id="emailCadastro" placeholder="Email" required>
-      <input type="password" id="senhaCadastro" placeholder="Senha" required>
-      <button type="submit">Cadastrar</button>
-    </form>
-
-    <p class="auth-link">Já tem conta? <a href="login.html">Entrar</a></p>
-    <p class="auth-link"><a href="index.html">Voltar ao início</a></p>
-  </div>
-</section>
-
-<script>
-let formCadastro = document.getElementById('formCadastro')
-
-formCadastro.addEventListener('submit', async function(event) {
-    event.preventDefault()
-
-    let nome = document.getElementById('nomeCadastro').value.trim()
-    let email = document.getElementById('emailCadastro').value.trim()
-    let senha = document.getElementById('senhaCadastro').value.trim()
-
-    if (nome == '' || email == '' || senha == '') {
-        alert('Preencha todos os campos')
-        return
-    }
-
-    try {
-        let resposta = await fetch('http://localhost:3000/api/cadastro', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                nome: nome,
-                email: email,
-                senha: senha
-            })
-        })
-
-        let dados = await resposta.json()
-
-        if (resposta.ok) {
-            window.location.href = './login.html'
-            return
-        }
-
-        alert(dados.mensagem)
-
-    } catch (erro) {
-        alert('Erro ao conectar com o servidor. Verifique se o backend está ligado.')
-    }
-})
-</script>
-</script>
-</body>
-</html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Criar conta | Syncrypta</title><link rel="stylesheet" href="style.css?v=4.0.2"></head>
+<body data-page="cadastro">
+<div class="auth-layout">
+  <section class="auth-showcase">
+    <a class="brand" href="index.html"><span class="brand-mark">S</span><span class="brand-copy"><strong>Syncrypta</strong><small>Contabilidade inteligente</small></span></a>
+    <div class="auth-showcase-content"><span class="eyebrow" style="color:#7de9fa">Comece sem custo</span><h1>Transforme dados financeiros em clareza.</h1><p>Crie uma conta para organizar movimentações, visualizar indicadores e experimentar a plataforma.</p><div class="auth-benefits"><div class="auth-benefit"><span data-icon="check"></span> Plano Básico gratuito</div><div class="auth-benefit"><span data-icon="check"></span> Importação CSV</div><div class="auth-benefit"><span data-icon="check"></span> Dashboard financeiro</div><div class="auth-benefit"><span data-icon="check"></span> Exportação de relatório</div></div></div>
+    <small style="color:#7691a4">Nenhum dado bancário real é necessário na demonstração.</small>
+  </section>
+  <main class="auth-form-area">
+    <section class="auth-card">
+      <a class="brand" href="index.html"><span class="brand-mark">S</span><span class="brand-copy"><strong>Syncrypta</strong><small>Nova conta</small></span></a>
+      <h2>Crie seu acesso</h2><p>Leva menos de um minuto para começar.</p>
+      <form class="auth-form" id="formCadastro">
+        <div class="input-group"><label for="nomeCadastro">Nome completo</label><input class="input" id="nomeCadastro" type="text" placeholder="Seu nome" required autocomplete="name"></div>
+        <div class="input-group"><label for="emailCadastro">E-mail</label><input class="input" id="emailCadastro" type="email" placeholder="voce@empresa.com" required autocomplete="email"></div>
+        <div class="input-group"><label for="senhaCadastro">Senha</label><input class="input" id="senhaCadastro" type="password" placeholder="Mínimo de 6 caracteres" minlength="6" required autocomplete="new-password"><div class="password-strength"><span id="passwordStrengthBar"></span></div></div>
+        <button class="button button-primary button-full" type="submit"><span data-icon="plus"></span> Criar conta</button>
+      </form>
+      <p class="auth-footer-link">Já possui acesso? <a href="login.html">Entrar na plataforma</a></p>
+    </section>
+  </main>
+</div><script src="script.js?v=4.0.2"></script></body></html>

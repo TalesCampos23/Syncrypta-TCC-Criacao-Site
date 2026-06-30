@@ -1,0 +1,12 @@
+ARQUIVOS DE TESTE — SYNCRYPTA 4.0
+
+1. extrato_teste.csv
+   Demonstra importação CSV com linhas completas e linhas que exigem classificação.
+
+2. extrato_teste.xlsx
+   Demonstra leitura de planilha Excel pela primeira aba.
+
+3. extrato_teste.ofx
+   Demonstra leitura de extrato bancário OFX.
+
+Use apenas dados fictícios. Não inclua CPF, número de cartão, senha bancária ou outros dados sensíveis.

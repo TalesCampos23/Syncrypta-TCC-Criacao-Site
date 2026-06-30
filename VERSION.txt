@@ -1,0 +1,2 @@
+Syncrypta 4.0.2 Premium Final
+Hotfix de redirecionamento, persistência de sessão e cache do frontend.
