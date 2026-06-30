@@ -30,8 +30,8 @@ Dashboard e relatório mensal de fluxo de caixa
 
 A plataforma foi desenvolvida para atender diferentes perfis:
 
-* **Pessoa física:** experiência mais simples, visual e acessível pelo celular.
-* **Pessoa jurídica:** maior detalhamento, filtros, centros de custo, contas, classificações e exportações.
+- **Pessoa física:** experiência mais simples, visual e acessível pelo celular.
+- **Pessoa jurídica:** maior detalhamento, filtros, centros de custo, contas, classificações e exportações.
 
 ---
 
@@ -71,32 +71,32 @@ A plataforma foi desenvolvida para atender diferentes perfis:
 
 ### Interface e experiência
 
-* Landing page premium apresentando a solução;
-* Login e cadastro redesenhados;
-* Tema claro e escuro;
-* Sidebar moderna e responsiva;
-* Interface adaptada para computador, tablet e celular;
-* Conta especial para demonstração do TCC;
-* Alteração da interface conforme o plano selecionado.
+- Landing page premium apresentando a solução;
+- Login e cadastro redesenhados;
+- Tema claro e escuro;
+- Sidebar moderna e responsiva;
+- Interface adaptada para computador, tablet e celular;
+- Conta especial para demonstração do TCC;
+- Alteração da interface conforme o plano selecionado.
 
 ### Dashboard financeiro
 
 O dashboard apresenta:
 
-* saldo inicial;
-* total de recebimentos;
-* total de pagamentos;
-* saldo final;
-* saúde financeira;
-* descasamento de caixa;
-* comparação com o mês anterior;
-* projeção dos próximos três meses;
-* despesas recorrentes;
-* gastos fora do padrão;
-* qualidade dos dados importados;
-* últimas movimentações;
-* gráficos mensais e por categoria;
-* escolha entre gráficos de barras, linhas, pizza e rosca.
+- saldo inicial;
+- total de recebimentos;
+- total de pagamentos;
+- saldo final;
+- saúde financeira;
+- descasamento de caixa;
+- comparação com o mês anterior;
+- projeção dos próximos três meses;
+- despesas recorrentes;
+- gastos fora do padrão;
+- qualidade dos dados importados;
+- últimas movimentações;
+- gráficos mensais e por categoria;
+- escolha entre gráficos de barras, linhas, pizza e rosca.
 
 A fórmula principal utilizada é:
 
@@ -108,57 +108,57 @@ Saldo final = saldo inicial + recebimentos − pagamentos
 
 A plataforma permite criar perfis para diferentes contextos, como:
 
-* pessoa física;
-* profissional autônomo;
-* empresa;
-* cliente de escritório contábil;
-* unidade ou centro de custo.
+- pessoa física;
+- profissional autônomo;
+- empresa;
+- cliente de escritório contábil;
+- unidade ou centro de custo.
 
 Os filtros podem considerar:
 
-* perfil financeiro;
-* mês;
-* origem;
-* conta ou cartão;
-* tipo da movimentação;
-* status da classificação.
+- perfil financeiro;
+- mês;
+- origem;
+- conta ou cartão;
+- tipo da movimentação;
+- status da classificação.
 
 ### Movimentações
 
 As movimentações possuem:
 
-* descrição;
-* tipo: receita ou pagamento;
-* valor;
-* data;
-* categoria;
-* subcategoria;
-* origem;
-* conta ou cartão;
-* contraparte;
-* centro de custo;
-* natureza do gasto;
-* perfil financeiro;
-* nível de confiança da classificação;
-* status de confirmação ou revisão.
+- descrição;
+- tipo: receita ou pagamento;
+- valor;
+- data;
+- categoria;
+- subcategoria;
+- origem;
+- conta ou cartão;
+- contraparte;
+- centro de custo;
+- natureza do gasto;
+- perfil financeiro;
+- nível de confiança da classificação;
+- status de confirmação ou revisão.
 
 Também estão disponíveis:
 
-* cadastro manual;
-* busca;
-* filtros;
-* ordenação;
-* edição;
-* exclusão;
-* aprendizado com a classificação escolhida.
+- cadastro manual;
+- busca;
+- filtros;
+- ordenação;
+- edição;
+- exclusão;
+- aprendizado com a classificação escolhida.
 
 ### Importação financeira
 
 A Syncrypta permite importar:
 
-* arquivos CSV;
-* planilhas Excel `.xlsx`;
-* arquivos OFX.
+- arquivos CSV;
+- planilhas Excel `.xlsx`;
+- arquivos OFX.
 
 Durante a importação, o sistema:
 
@@ -174,12 +174,12 @@ Durante a importação, o sistema:
 
 Antes de confirmar uma importação, o usuário pode:
 
-* alterar o tipo da movimentação;
-* alterar a categoria;
-* alterar a subcategoria;
-* confirmar sugestões;
-* identificar itens não classificados;
-* escolher se a correção deverá gerar uma nova regra.
+- alterar o tipo da movimentação;
+- alterar a categoria;
+- alterar a subcategoria;
+- confirmar sugestões;
+- identificar itens não classificados;
+- escolher se a correção deverá gerar uma nova regra.
 
 ### Regras inteligentes
 
@@ -204,48 +204,48 @@ Quando o usuário corrige uma classificação e permite o aprendizado, a regra f
 
 Os relatórios apresentam:
 
-* saldo inicial;
-* recebimentos;
-* pagamentos;
-* saldo final;
-* resumo gerencial;
-* comparação com o mês anterior;
-* gastos por categoria;
-* gastos por subcategoria;
-* gastos fora do padrão;
-* projeção dos próximos meses;
-* lista completa das movimentações;
-* exportação CSV;
-* exportação Excel;
-* impressão e geração de PDF pelo navegador.
+- saldo inicial;
+- recebimentos;
+- pagamentos;
+- saldo final;
+- resumo gerencial;
+- comparação com o mês anterior;
+- gastos por categoria;
+- gastos por subcategoria;
+- gastos fora do padrão;
+- projeção dos próximos meses;
+- lista completa das movimentações;
+- exportação CSV;
+- exportação Excel;
+- impressão e geração de PDF pelo navegador.
 
 ### Gestão e controle
 
-* Gestão de perfis financeiros;
-* Auditoria de ações;
-* Histórico de alterações;
-* Notificações inteligentes;
-* Alertas diferentes para pessoa física e pessoa jurídica;
-* Controle de recursos por plano;
-* Checkout demonstrativo;
-* Ativação demonstrativa de planos.
+- Gestão de perfis financeiros;
+- Auditoria de ações;
+- Histórico de alterações;
+- Notificações inteligentes;
+- Alertas diferentes para pessoa física e pessoa jurídica;
+- Controle de recursos por plano;
+- Checkout demonstrativo;
+- Ativação demonstrativa de planos.
 
 ---
 
 ## Planos
 
-| Recurso                     | Básico | Profissional | Empresarial |
-| --------------------------- | :----: | :----------: | :---------: |
-| Dashboard e movimentações   |   Sim  |      Sim     |     Sim     |
-| Importação e exportação CSV |   Sim  |      Sim     |     Sim     |
-| Excel e OFX                 |   Não  |      Sim     |     Sim     |
-| Central de revisão          |   Não  |      Sim     |     Sim     |
-| Regras inteligentes         |   Não  |      Sim     |     Sim     |
-| Projeção financeira         |   Não  |      Sim     |     Sim     |
-| Perfis financeiros          |   Não  |      Sim     |     Sim     |
-| Centros de custo            |   Não  |      Não     |     Sim     |
-| Auditoria avançada          |   Não  |      Não     |     Sim     |
-| Recursos empresariais       |   Não  |      Não     |     Sim     |
+| Recurso | Básico | Profissional | Empresarial |
+|---|:---:|:---:|:---:|
+| Dashboard e movimentações | Sim | Sim | Sim |
+| Importação e exportação CSV | Sim | Sim | Sim |
+| Excel e OFX | Não | Sim | Sim |
+| Central de revisão | Não | Sim | Sim |
+| Regras inteligentes | Não | Sim | Sim |
+| Projeção financeira | Não | Sim | Sim |
+| Perfis financeiros | Não | Sim | Sim |
+| Centros de custo | Não | Não | Sim |
+| Auditoria avançada | Não | Não | Sim |
+| Recursos empresariais | Não | Não | Sim |
 
 Os pagamentos são apenas demonstrativos e não geram cobranças reais.
 
@@ -253,12 +253,12 @@ Os pagamentos são apenas demonstrativos e não geram cobranças reais.
 
 ## Formatos de entrada
 
-| Formato       | Situação                                     |
-| ------------- | -------------------------------------------- |
-| CSV           | Funcional                                    |
-| Excel `.xlsx` | Funcional pela primeira aba                  |
-| OFX           | Funcional para lançamentos bancários básicos |
-| PDF           | Planejado para uma etapa futura              |
+| Formato | Situação |
+|---|---|
+| CSV | Funcional |
+| Excel `.xlsx` | Funcional pela primeira aba |
+| OFX | Funcional para lançamentos bancários básicos |
+| PDF | Planejado para uma etapa futura |
 
 A pasta `arquivos_teste` contém exemplos prontos para apresentação.
 
@@ -275,15 +275,15 @@ Senha: Syncrypta@2026
 
 Essa conta:
 
-* começa no plano Empresarial;
-* possui dados financeiros fictícios;
-* possui perfis de pessoa física e jurídica;
-* possui regras de classificação;
-* possui saldos iniciais;
-* possui registros de auditoria;
-* pode alternar livremente entre os planos;
-* não precisa realizar pagamento;
-* muda a interface conforme o plano selecionado.
+- começa no plano Empresarial;
+- possui dados financeiros fictícios;
+- possui perfis de pessoa física e jurídica;
+- possui regras de classificação;
+- possui saldos iniciais;
+- possui registros de auditoria;
+- pode alternar livremente entre os planos;
+- não precisa realizar pagamento;
+- muda a interface conforme o plano selecionado.
 
 ### Usuário comum
 
@@ -294,10 +294,10 @@ Senha: Demo@2026
 
 Essa conta:
 
-* começa no plano Básico;
-* permite testar as limitações dos planos;
-* permite acessar o checkout demonstrativo;
-* pode ativar planos por PIX ou cartão simulados.
+- começa no plano Básico;
+- permite testar as limitações dos planos;
+- permite acessar o checkout demonstrativo;
+- pode ativar planos por PIX ou cartão simulados.
 
 > O telefone pessoal informado durante o desenvolvimento não foi incluído no código, nos dados de teste ou nas credenciais.
 
@@ -307,32 +307,32 @@ Essa conta:
 
 ### Front-end
 
-* HTML5;
-* CSS3;
-* JavaScript;
-* Chart.js;
-* interface responsiva;
-* Local Storage e Session Storage para controle da sessão no navegador.
+- HTML5;
+- CSS3;
+- JavaScript;
+- Chart.js;
+- interface responsiva;
+- Local Storage e Session Storage para controle da sessão no navegador.
 
 ### Back-end
 
-* Node.js;
-* Express;
-* bcryptjs;
-* JSON Web Token;
-* Helmet;
-* express-rate-limit;
-* CORS;
-* dotenv;
-* armazenamento demonstrativo em arquivos JSON.
+- Node.js;
+- Express;
+- bcryptjs;
+- JSON Web Token;
+- Helmet;
+- express-rate-limit;
+- CORS;
+- dotenv;
+- armazenamento demonstrativo em arquivos JSON.
 
 ### Ferramentas
 
-* Visual Studio Code;
-* Live Server;
-* Git;
-* GitHub;
-* npm.
+- Visual Studio Code;
+- Live Server;
+- Git;
+- GitHub;
+- npm.
 
 ---
 
@@ -340,10 +340,10 @@ Essa conta:
 
 Para executar o projeto, é necessário instalar:
 
-* Node.js LTS;
-* npm;
-* Visual Studio Code;
-* extensão Live Server.
+- Node.js LTS;
+- npm;
+- Visual Studio Code;
+- extensão Live Server.
 
 ---
 
@@ -447,8 +447,8 @@ O projeto também possui:
 2_INICIAR_BACKEND.bat
 ```
 
-* `1_PREPARAR_DEMO.bat`: instala as dependências e cria os dados demonstrativos;
-* `2_INICIAR_BACKEND.bat`: inicia o servidor.
+- `1_PREPARAR_DEMO.bat`: instala as dependências e cria os dados demonstrativos;
+- `2_INICIAR_BACKEND.bat`: inicia o servidor.
 
 ---
 
@@ -523,63 +523,63 @@ Syncrypta-TCC-Criacao-Site/
 
 A Syncrypta evita o cadastro de informações como:
 
-* CPF;
-* CNPJ;
-* número completo do cartão;
-* CVV;
-* senha bancária;
-* credenciais financeiras reais.
+- CPF;
+- CNPJ;
+- número completo do cartão;
+- CVV;
+- senha bancária;
+- credenciais financeiras reais.
 
 O projeto demonstra:
 
-* hash de senhas com bcrypt;
-* autenticação JWT;
-* rotas protegidas;
-* limite de tentativas de login;
-* cabeçalhos de segurança com Helmet;
-* separação de informações por usuário;
-* controle de recursos por plano;
-* auditoria de operações;
-* arquivo `.env.example` sem segredo real;
-* dados fictícios para demonstração.
+- hash de senhas com bcrypt;
+- autenticação JWT;
+- rotas protegidas;
+- limite de tentativas de login;
+- cabeçalhos de segurança com Helmet;
+- separação de informações por usuário;
+- controle de recursos por plano;
+- auditoria de operações;
+- arquivo `.env.example` sem segredo real;
+- dados fictícios para demonstração.
 
 Para uma versão de produção ainda seriam necessários:
 
-* banco de dados gerenciado;
-* HTTPS;
-* backups;
-* recuperação de conta;
-* consentimento;
-* política de privacidade;
-* adequação completa à LGPD;
-* provedor real de pagamentos;
-* testes automatizados;
-* testes de segurança;
-* monitoramento e logs em servidor.
+- banco de dados gerenciado;
+- HTTPS;
+- backups;
+- recuperação de conta;
+- consentimento;
+- política de privacidade;
+- adequação completa à LGPD;
+- provedor real de pagamentos;
+- testes automatizados;
+- testes de segurança;
+- monitoramento e logs em servidor.
 
 ---
 
 ## Limitações conhecidas
 
-* arquivos PDF ainda não são interpretados automaticamente;
-* o leitor de Excel trabalha com a primeira aba;
-* o parser OFX cobre os campos mais comuns;
-* pagamentos são simulados;
-* nenhuma integração bancária real é realizada;
-* projeções são demonstrativas e baseadas em médias e recorrência;
-* não existe um modelo de inteligência artificial externo treinado;
-* o armazenamento em JSON é adequado para apresentação, mas não para produção.
+- arquivos PDF ainda não são interpretados automaticamente;
+- o leitor de Excel trabalha com a primeira aba;
+- o parser OFX cobre os campos mais comuns;
+- pagamentos são simulados;
+- nenhuma integração bancária real é realizada;
+- projeções são demonstrativas e baseadas em médias e recorrência;
+- não existe um modelo de inteligência artificial externo treinado;
+- o armazenamento em JSON é adequado para apresentação, mas não para produção.
 
 ---
 
 ## Integrantes
 
-* **Tales Oliveira Campos** — RM 13222
-* **Kenny Koixun Navarrete Yang** — RM 14356
-* **Pedro Henrique Tourino Marconni** — RM 16082
-* **Lucas Rezende Rino** — RM 16444
-* **Vinicius Ettore Almeida Souza** — RM 16320
-* **Henrique de Paula Corredor** — RM 16365
+- **Tales Oliveira Campos** — RM 13222
+- **Kenny Koixun Navarrete Yang** — RM 14356
+- **Pedro Henrique Tourino Marconni** — RM 16082
+- **Lucas Rezende Rino** — RM 16444
+- **Vinicius Ettore Almeida Souza** — RM 16320
+- **Henrique de Paula Corredor** — RM 16365
 
 ---
 
@@ -589,10 +589,10 @@ Para uma versão de produção ainda seriam necessários:
 
 Projeto preparado para:
 
-* testes;
-* demonstração;
-* apresentação do TCC;
-* refinamentos finais até outubro de 2026.
+- testes;
+- demonstração;
+- apresentação do TCC;
+- refinamentos finais até outubro de 2026.
 
 ---
 
