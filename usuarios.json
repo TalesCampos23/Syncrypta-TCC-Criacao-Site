@@ -1,0 +1,14 @@
+[
+  {
+    "id": 900001,
+    "nome": "Thais Calca",
+    "email": "thais.demo@syncrypta.local",
+    "senha": "$2b$10$v2ORWDL5lBSICkF7R7kAnudtC6UvNtj3kTyhZdH.zeGll0JnrV9K.",
+    "perfil": "cliente_tcc",
+    "plano": "empresarial",
+    "acessoTotal": true,
+    "pagamentoStatus": "isento",
+    "criadoEm": "2026-10-21T14:42:16.073Z",
+    "ativo": true
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "name": "syncrypta-backend",
+  "version": "4.14.0",
+  "description": "API demonstrativa da plataforma Syncrypta para o TCC da FIAP School.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "seed": "node seed-demo.js",
+    "start:demo": "node seed-demo.js && node server.js"
+  },
+  "keywords": [
+    "fintech",
+    "fluxo-de-caixa",
+    "tcc",
+    "fiap"
+  ],
+  "author": "Grupo Syncrypta",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

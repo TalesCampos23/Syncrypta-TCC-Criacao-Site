@@ -1,0 +1,46 @@
+[
+  {
+    "id": 930001,
+    "usuarioId": 900001,
+    "clienteId": 920001,
+    "termo": "shell",
+    "categoria": "Transporte",
+    "subcategoria": "Combustível",
+    "tipo": "pagamento",
+    "confianca": 99,
+    "ativa": true
+  },
+  {
+    "id": 930002,
+    "usuarioId": 900001,
+    "clienteId": 920001,
+    "termo": "mercado",
+    "categoria": "Alimentação",
+    "subcategoria": "Supermercado",
+    "tipo": "pagamento",
+    "confianca": 99,
+    "ativa": true
+  },
+  {
+    "id": 930003,
+    "usuarioId": 900001,
+    "clienteId": 920001,
+    "termo": "mensalidade",
+    "categoria": "Receita",
+    "subcategoria": "Serviços prestados",
+    "tipo": "receita",
+    "confianca": 99,
+    "ativa": true
+  },
+  {
+    "id": 930004,
+    "usuarioId": 900001,
+    "clienteId": 920002,
+    "termo": "uber repasse",
+    "categoria": "Receita",
+    "subcategoria": "Trabalho por aplicativo",
+    "tipo": "receita",
+    "confianca": 99,
+    "ativa": true
+  }
+]

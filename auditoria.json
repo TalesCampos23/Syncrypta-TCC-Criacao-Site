@@ -1,0 +1,118 @@
+[
+  {
+    "id": 1792593744798,
+    "usuarioId": 900001,
+    "acao": "LOGIN",
+    "entidade": "sessao",
+    "detalhes": {},
+    "dataHora": "2026-10-21T14:42:24.093Z"
+  },
+  {
+    "id": 960001,
+    "usuarioId": 900001,
+    "acao": "EXPORTOU_RELATORIO",
+    "entidade": "relatorio",
+    "detalhes": {
+      "formato": "excel",
+      "mes": "2026-10",
+      "linhas": 38
+    },
+    "dataHora": "2026-10-21T12:42:16.306Z"
+  },
+  {
+    "id": 960002,
+    "usuarioId": 900001,
+    "acao": "RECLASSIFICOU_LOTE",
+    "entidade": "movimentacao",
+    "detalhes": {
+      "quantidade": 3,
+      "categoria": "Transporte",
+      "subcategoria": "Combustível"
+    },
+    "dataHora": "2026-10-21T09:42:16.306Z"
+  },
+  {
+    "id": 960003,
+    "usuarioId": 900001,
+    "acao": "IMPORTOU_ARQUIVO",
+    "entidade": "movimentacao",
+    "detalhes": {
+      "quantidade": 24,
+      "regrasAprendidas": 2
+    },
+    "dataHora": "2026-10-20T12:42:16.306Z"
+  },
+  {
+    "id": 960004,
+    "usuarioId": 900001,
+    "acao": "CRIOU_REGRA",
+    "entidade": "regra",
+    "detalhes": {
+      "termo": "posto"
+    },
+    "dataHora": "2026-10-20T11:42:16.306Z"
+  },
+  {
+    "id": 960005,
+    "usuarioId": 900001,
+    "acao": "EDITOU",
+    "entidade": "movimentacao",
+    "detalhes": {
+      "descricao": "Mercado Central"
+    },
+    "dataHora": "2026-10-19T12:42:16.306Z"
+  },
+  {
+    "id": 960006,
+    "usuarioId": 900001,
+    "acao": "DEFINIU_SALDO_INICIAL",
+    "entidade": "saldo",
+    "detalhes": {
+      "mes": "2026-10",
+      "valor": 7400
+    },
+    "dataHora": "2026-10-18T12:42:16.306Z"
+  },
+  {
+    "id": 960007,
+    "usuarioId": 900001,
+    "acao": "EXCLUIU",
+    "entidade": "movimentacao",
+    "detalhes": {
+      "descricao": "Lançamento duplicado"
+    },
+    "dataHora": "2026-10-17T12:42:16.306Z"
+  },
+  {
+    "id": 960008,
+    "usuarioId": 900001,
+    "acao": "CRIOU",
+    "entidade": "perfil_financeiro",
+    "detalhes": {
+      "nome": "Alfa Consultoria"
+    },
+    "dataHora": "2026-10-16T12:42:16.306Z"
+  },
+  {
+    "id": 960009,
+    "usuarioId": 900001,
+    "acao": "EXPORTOU_RELATORIO",
+    "entidade": "relatorio",
+    "detalhes": {
+      "formato": "csv",
+      "mes": "2026-09",
+      "linhas": 41
+    },
+    "dataHora": "2026-10-15T12:42:16.306Z"
+  },
+  {
+    "id": 960010,
+    "usuarioId": 900001,
+    "acao": "SEED_DEMO",
+    "entidade": "sistema",
+    "detalhes": {
+      "versao": "4.12"
+    },
+    "dataHora": "2026-10-14T12:42:16.306Z"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 950001,
+    "usuarioId": 900001,
+    "clienteId": 920001,
+    "mes": "2026-10",
+    "valor": 7400,
+    "atualizadoEm": "2026-10-21T14:42:16.306Z"
+  },
+  {
+    "id": 950002,
+    "usuarioId": 900001,
+    "clienteId": 920001,
+    "mes": "2026-09",
+    "valor": 6800,
+    "atualizadoEm": "2026-10-21T14:42:16.306Z"
+  },
+  {
+    "id": 950003,
+    "usuarioId": 900001,
+    "clienteId": 920002,
+    "mes": "2026-10",
+    "valor": 900,
+    "atualizadoEm": "2026-10-21T14:42:16.306Z"
+  }
+]
