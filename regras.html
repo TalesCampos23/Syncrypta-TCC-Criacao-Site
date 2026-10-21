@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Syncrypta 4.0 — controle inteligente e adaptativo de fluxo de caixa.">
+  <title>Regras inteligentes | Syncrypta</title>
+  <link rel="stylesheet" href="style.css?v=4.14.0">
+  <link rel="stylesheet" href="interface-upgrade.css?v=4.14.0">
+  <link rel="stylesheet" href="visual-refresh.css?v=4.14.0">
+  <link rel="stylesheet" href="ajustes-finais.css?v=4.14.0">
+  <link rel="stylesheet" href="novidades-4-9.css?v=4.14.0">
+  <link rel="icon" type="image/png" href="imagens/logo-icone.png">
+</head>
+
+<body data-page="regras" data-recurso-pagina="regras_automaticas">
+  <div class="app-shell">
+
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="sidebar" id="appSidebar">
+      <button class="sidebar-toggle" id="sidebarToggle" type="button" onclick="alternarSidebar()"
+        aria-label="Recolher menu" title="Recolher menu">
+        <span data-icon="menu"></span>
+      </button>
+
+      <a class="brand" href="dashboard.html">
+        <span class="brand-mark brand-mark-art"><img src="imagens/logo-icone.png" alt="" width="44" height="44"></span>
+        <span class="brand-copy">
+          <strong>Syncrypta</strong>
+          <small>Fluxo de caixa inteligente</small>
+        </span>
+      </a>
+
+      <div class="sidebar-section-label">Operação financeira</div>
+
+      <nav class="nav-list">
+        <a class="nav-link" href="dashboard.html">
+          <span data-icon="dashboard"></span>
+          <span>Visão geral</span>
+        </a>
+        <a class="nav-link" href="movimentacoes.html">
+          <span data-icon="wallet"></span>
+          <span>Movimentações</span>
+        </a>
+        <a class="nav-link" href="importacao.html">
+          <span data-icon="upload"></span>
+          <span>Importar e revisar</span>
+        </a>
+        <a class="nav-link active" href="regras.html" data-recurso="regras_automaticas">
+          <span data-icon="sparkles"></span>
+          <span>Regras inteligentes</span>
+          <span class="nav-lock">
+            <span data-icon="lock"></span>
+          </span>
+        </a>
+        <a class="nav-link" href="clientes.html" data-recurso="clientes">
+          <span data-icon="users"></span>
+          <span>Perfis financeiros</span>
+          <span class="nav-lock">
+            <span data-icon="lock"></span>
+          </span>
+        </a>
+        <a class="nav-link" href="relatorios.html">
+          <span data-icon="chart"></span>
+          <span>Relatórios mensais</span>
+        </a>
+        <a class="nav-link" href="auditoria.html" data-recurso="auditoria">
+          <span data-icon="shield"></span>
+          <span>Auditoria</span>
+          <span class="nav-lock">
+            <span data-icon="lock"></span>
+          </span>
+        </a>
+        <a class="nav-link" href="ajuda.html">
+          <span data-icon="info"></span>
+          <span>Ajuda</span>
+        </a>
+        <a class="nav-link" href="configuracoes.html">
+          <span data-icon="settings"></span>
+          <span>Configurações</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+
+    </aside>
+
+    <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
+    <main class="app-main">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <button class="icon-button mobile-menu-button" onclick="alternarSidebar()" aria-label="Abrir menu">
+          <span data-icon="menu"></span>
+        </button>
+
+        <div class="topbar-actions">
+          <div class="topbar-popover-wrap">
+            <button class="icon-button topbar-bell" id="notificationToggle" type="button" onclick="abrirNotificacoes()" aria-label="Notificações" aria-expanded="false" aria-controls="notificationPanel">
+              <span data-icon="bell"></span><span class="topbar-count" id="contadorNotificacoes" hidden>0</span>
+            </button>
+            <section class="topbar-popover notification-panel" id="notificationPanel" aria-label="Notificações" hidden>
+              <div class="popover-heading"><div><span class="eyebrow">Sua atividade</span><h2>Notificações</h2></div><button type="button" class="popover-close" onclick="fecharMenusTopo()" aria-label="Fechar notificações">×</button></div>
+              <p class="popover-subtitle" id="resumoNotificacoes">Carregando avisos...</p>
+              <div class="popover-list" id="listaNotificacoes" aria-live="polite"></div>
+            </section>
+          </div>
+          <div class="topbar-popover-wrap">
+            <button class="topbar-user" id="accountToggle" type="button" onclick="alternarMenuConta()" aria-label="Abrir menu do perfil" aria-expanded="false" aria-controls="accountMenu">
+              <span class="user-avatar" data-user-initials>US</span>
+              <span class="topbar-user-label"><strong data-user-name>Usuário</strong><small data-plan-name>Básico</small></span>
+              <span data-icon="chevron"></span>
+            </button>
+            <div class="topbar-popover account-menu" id="accountMenu" hidden>
+              <div class="account-menu-head"><strong data-user-name>Usuário</strong><small data-user-email></small></div>
+              <button type="button" class="account-menu-action" id="accountPlans" onclick="fecharMenusTopo(); abrirPlanos()"><span data-icon="card"></span><span>Ver e trocar plano</span><span data-icon="chevron"></span></button>
+              <a class="account-menu-action" id="accountSettings" href="configuracoes.html"><span data-icon="settings"></span><span>Configurações</span><span data-icon="chevron"></span></a>
+              <button type="button" class="account-menu-action account-menu-exit" onclick="sair()"><span data-icon="logout"></span><span>Sair da conta</span></button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Conteúdo da página -->
+      <div class="page-content">
+
+        <!-- Cabeçalho da página -->
+        <header class="page-header">
+          <div class="page-title">
+            <h1>Regras inteligentes</h1>
+            <p>Transforme correções recorrentes em classificações automáticas para os próximos meses.</p>
+          </div>
+          <div class="page-actions"></div>
+        </header>
+
+        <!-- Formulário de regra -->
+        <section class="panel" id="ruleFormCard">
+          <div class="panel-header">
+            <div>
+              <h2 id="ruleFormTitle">Nova regra automática</h2>
+              <p>Exemplo: <strong>Transporte / Combustível</strong> sempre que a descrição tiver “Shell”.</p>
+            </div>
+            <span class="status-dot status-ok">Aprendizado controlado</span>
+          </div>
+
+          <form class="form-grid" id="formRegra">
+            <div class="input-group">
+              <label for="regraCategoria">Categoria</label>
+              <input class="input" id="regraCategoria" list="regraCategoriasLista" placeholder="Ex.: Transporte" required>
+              <datalist id="regraCategoriasLista"></datalist>
+            </div>
+
+            <div class="input-group">
+              <label for="regraSubcategoria">Subcategoria</label>
+              <input class="input" id="regraSubcategoria" placeholder="Ex.: Combustível">
+            </div>
+
+            <div class="input-group span-2">
+              <label for="regraTermo">Palavra que aparece na descrição</label>
+              <input class="input" id="regraTermo" placeholder="Ex.: Shell, Enel, Mercado" required>
+              <small class="helper-text">Sempre que um lançamento tiver essa palavra, ele entra na categoria acima.</small>
+            </div>
+
+            <div class="input-group">
+              <label for="regraTipo">Tipo</label>
+              <select class="input" id="regraTipo">
+                <option value="pagamento">Pagamento</option>
+                <option value="receita">Receita</option>
+              </select>
+            </div>
+
+            <div class="input-group">
+              <label for="regraCliente">Aplicar ao perfil</label>
+              <select class="input" id="regraCliente"></select>
+            </div>
+
+            <div class="form-actions">
+              <button class="button button-ghost" id="cancelRuleEdit" type="button" onclick="cancelarEdicaoRegra()"
+                hidden>
+                Cancelar
+              </button>
+              <button class="button button-primary" type="submit">
+                <span data-icon="sparkles"></span>
+                <span id="ruleSubmitText">Salvar regra</span>
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- 4.13: testar as regras com uma descrição, sem salvar nada -->
+        <section class="panel regra-teste">
+          <div class="panel-header">
+            <div>
+              <h2>Testar as regras</h2>
+              <p>Digite uma descrição como ela aparece no extrato e veja em qual categoria ela cairia. Nada é salvo.</p>
+            </div>
+          </div>
+          <form class="regra-teste-form" id="formTesteRegra">
+            <input class="input" id="testeRegraDescricao" maxlength="160" placeholder="Ex.: POSTO SHELL AV PAULISTA" aria-label="Descrição para testar">
+            <select class="input" id="testeRegraTipo" aria-label="Tipo">
+              <option value="">Tipo: qualquer</option>
+              <option value="pagamento">Pagamento</option>
+              <option value="receita">Receita</option>
+            </select>
+            <button class="button button-secondary" type="submit"><span data-icon="sparkles"></span> Testar</button>
+          </form>
+          <div class="regra-teste-resultado" id="testeRegraResultado" aria-live="polite"></div>
+        </section>
+
+        <!-- Biblioteca de classificação -->
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <h2>Biblioteca de classificação</h2>
+              <p>Regras organizadas por categoria. As personalizadas podem ser editadas; as padrão protegem a experiência inicial.</p>
+            </div>
+          </div>
+
+          <div class="filter-bar rules-filter-bar">
+            <div class="search-input">
+              <span data-icon="search"></span>
+              <input class="input" id="buscaRegra" placeholder="Buscar categoria ou palavra">
+            </div>
+            <select class="input" id="filtroRegraCategoria" aria-label="Filtrar por categoria">
+              <option value="">Todas as categorias</option>
+            </select>
+            <select class="input" id="filtroRegraCliente" aria-label="Filtrar por perfil"></select>
+          </div>
+
+          <div class="rules-grid" id="rulesGrid"></div>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <script src="script.js?v=4.14.0"></script>
+  <script src="cnpj.js?v=4.14.0"></script>
+  <script src="ajuda-conteudo.js?v=4.14.0"></script>
+  <script src="tour.js?v=4.14.0"></script>
+  <script src="helperbot.js?v=4.14.0"></script>
+</body>
+
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Syncrypta 4.0 — controle inteligente e adaptativo de fluxo de caixa.">
+  <title>Configurações | Syncrypta</title>
+  <link rel="stylesheet" href="style.css?v=4.14.0">
+  <link rel="stylesheet" href="interface-upgrade.css?v=4.14.0">
+  <link rel="stylesheet" href="visual-refresh.css?v=4.14.0">
+  <link rel="stylesheet" href="ajustes-finais.css?v=4.14.0">
+  <link rel="stylesheet" href="novidades-4-9.css?v=4.14.0">
+  <link rel="icon" type="image/png" href="imagens/logo-icone.png">
+</head>
+
+<body data-page="configuracoes">
+  <div class="app-shell">
+
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="sidebar" id="appSidebar">
+      <button class="sidebar-toggle" id="sidebarToggle" type="button" onclick="alternarSidebar()"
+        aria-label="Recolher menu" title="Recolher menu">
+        <span data-icon="menu"></span>
+      </button>
+
+      <a class="brand" href="dashboard.html">
+        <span class="brand-mark brand-mark-art"><img src="imagens/logo-icone.png" alt="" width="44" height="44"></span>
+        <span class="brand-copy">
+          <strong>Syncrypta</strong>
+          <small>Fluxo de caixa inteligente</small>
+        </span>
+      </a>
+
+      <div class="sidebar-section-label">Operação financeira</div>
+
+      <nav class="nav-list">
+        <a class="nav-link" href="dashboard.html">
+          <span data-icon="dashboard"></span>
+          <span>Visão geral</span>
+        </a>
+        <a class="nav-link" href="movimentacoes.html">
+          <span data-icon="wallet"></span>
+          <span>Movimentações</span>
+        </a>
+        <a class="nav-link" href="importacao.html">
+          <span data-icon="upload"></span>
+          <span>Importar e revisar</span>
+        </a>
+        <a class="nav-link" href="regras.html" data-recurso="regras_automaticas">
+          <span data-icon="sparkles"></span>
+          <span>Regras inteligentes</span>
+          <span class="nav-lock">
+            <span data-icon="lock"></span>
+          </span>
+        </a>
+        <a class="nav-link" href="clientes.html" data-recurso="clientes">
+          <span data-icon="users"></span>
+          <span>Perfis financeiros</span>
+          <span class="nav-lock">
+            <span data-icon="lock"></span>
+          </span>
+        </a>
+        <a class="nav-link" href="relatorios.html">
+          <span data-icon="chart"></span>
+          <span>Relatórios mensais</span>
+        </a>
+        <a class="nav-link" href="auditoria.html" data-recurso="auditoria">
+          <span data-icon="shield"></span>
+          <span>Auditoria</span>
+          <span class="nav-lock">
+            <span data-icon="lock"></span>
+          </span>
+        </a>
+        <a class="nav-link" href="ajuda.html">
+          <span data-icon="info"></span>
+          <span>Ajuda</span>
+        </a>
+        <a class="nav-link active" href="configuracoes.html">
+          <span data-icon="settings"></span>
+          <span>Configurações</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+
+    </aside>
+
+    <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
+    <main class="app-main">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <button class="icon-button mobile-menu-button" onclick="alternarSidebar()" aria-label="Abrir menu">
+          <span data-icon="menu"></span>
+        </button>
+
+        <div class="topbar-actions">
+          <div class="topbar-popover-wrap">
+            <button class="icon-button topbar-bell" id="notificationToggle" type="button" onclick="abrirNotificacoes()" aria-label="Notificações" aria-expanded="false" aria-controls="notificationPanel">
+              <span data-icon="bell"></span><span class="topbar-count" id="contadorNotificacoes" hidden>0</span>
+            </button>
+            <section class="topbar-popover notification-panel" id="notificationPanel" aria-label="Notificações" hidden>
+              <div class="popover-heading"><div><span class="eyebrow">Sua atividade</span><h2>Notificações</h2></div><button type="button" class="popover-close" onclick="fecharMenusTopo()" aria-label="Fechar notificações">×</button></div>
+              <p class="popover-subtitle" id="resumoNotificacoes">Carregando avisos...</p>
+              <div class="popover-list" id="listaNotificacoes" aria-live="polite"></div>
+            </section>
+          </div>
+          <div class="topbar-popover-wrap">
+            <button class="topbar-user" id="accountToggle" type="button" onclick="alternarMenuConta()" aria-label="Abrir menu do perfil" aria-expanded="false" aria-controls="accountMenu">
+              <span class="user-avatar" data-user-initials>US</span>
+              <span class="topbar-user-label"><strong data-user-name>Usuário</strong><small data-plan-name>Básico</small></span>
+              <span data-icon="chevron"></span>
+            </button>
+            <div class="topbar-popover account-menu" id="accountMenu" hidden>
+              <div class="account-menu-head"><strong data-user-name>Usuário</strong><small data-user-email></small></div>
+              <button type="button" class="account-menu-action" id="accountPlans" onclick="fecharMenusTopo(); abrirPlanos()"><span data-icon="card"></span><span>Ver e trocar plano</span><span data-icon="chevron"></span></button>
+              <a class="account-menu-action" id="accountSettings" href="configuracoes.html"><span data-icon="settings"></span><span>Configurações</span><span data-icon="chevron"></span></a>
+              <button type="button" class="account-menu-action account-menu-exit" onclick="sair()"><span data-icon="logout"></span><span>Sair da conta</span></button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Conteúdo da página -->
+      <div class="page-content">
+
+        <!-- Cabeçalho da página -->
+        <header class="page-header">
+          <div class="page-title">
+            <span class="page-kicker">SUA CONTA / PREFERÊNCIAS</span>
+            <h1>Configurações</h1>
+            <p>Deixe a Syncrypta do seu jeito e cuide da segurança da sua conta.</p>
+          </div>
+        </header>
+
+        <!-- Abas -->
+        <nav class="config-abas" role="tablist" aria-label="Seções das configurações">
+          <button type="button" role="tab" class="ativa" data-aba="conta" aria-selected="true"><span data-icon="users"></span> Conta</button>
+          <button type="button" role="tab" data-aba="aparencia" aria-selected="false"><span data-icon="eye"></span> Aparência</button>
+          <button type="button" role="tab" data-aba="uso" aria-selected="false"><span data-icon="sparkles"></span> Uso</button>
+          <button type="button" role="tab" data-aba="seguranca" aria-selected="false"><span data-icon="lock"></span> Segurança</button>
+          <button type="button" role="tab" data-aba="usuarios" aria-selected="false" id="abaBotaoUsuarios" hidden><span data-icon="shield"></span> Usuários</button>
+        </nav>
+        <p class="config-aviso" id="configAvisoLocal" hidden></p>
+
+        <!-- ===== CONTA ===== -->
+        <section class="panel config-aba" id="aba-conta" role="tabpanel">
+          <div class="config-conta-topo">
+            <span class="user-avatar config-avatar" id="configAvatar">US</span>
+            <div>
+              <h2 id="configNomeTitulo">Sua conta</h2>
+              <p id="configEmail" class="helper-text"></p>
+              <div class="config-selos" id="configSelos"></div>
+            </div>
+          </div>
+          <form class="config-linha-form" id="formNome">
+            <div class="input-group">
+              <label for="configNome">Nome que aparece no site</label>
+              <input class="input" id="configNome" maxlength="80" autocomplete="name">
+            </div>
+            <button class="button button-primary" type="submit"><span data-icon="check"></span> Salvar nome</button>
+          </form>
+          <div class="config-plano" id="configPlano"></div>
+        </section>
+
+        <!-- ===== APARÊNCIA ===== -->
+        <section class="panel config-aba" id="aba-aparencia" role="tabpanel" hidden>
+          <div class="panel-header"><div><h2>Aparência e acessibilidade</h2><p>As mudanças aparecem na hora e ficam salvas.</p></div></div>
+          <div class="config-opcoes">
+            <div class="config-opcao">
+              <div><strong>Tamanho do texto</strong><small>Letras maiores em todas as telas.</small></div>
+              <div class="config-segmento" data-pref="fonte"><button type="button" data-valor="normal">Normal</button><button type="button" data-valor="grande">Grande</button></div>
+            </div>
+            <div class="config-opcao">
+              <div><strong>Espaçamento</strong><small>Compacto mostra mais informação de uma vez.</small></div>
+              <div class="config-segmento" data-pref="densidade"><button type="button" data-valor="confortavel">Confortável</button><button type="button" data-valor="compacta">Compacto</button></div>
+            </div>
+            <div class="config-opcao">
+              <div><strong>Cor de destaque</strong><small>Cor dos botões principais e do menu.</small></div>
+              <div class="config-segmento" data-pref="destaque"><button type="button" data-valor="ciano"><i class="config-cor ciano"></i>Ciano</button><button type="button" data-valor="roxo"><i class="config-cor roxo"></i>Roxo</button></div>
+            </div>
+            <div class="config-opcao">
+              <div><strong>Animações</strong><small>Desligue se os movimentos da tela incomodam.</small></div>
+              <div class="config-segmento" data-pref="animacoes"><button type="button" data-valor="true">Ligadas</button><button type="button" data-valor="false">Reduzidas</button></div>
+            </div>
+          </div>
+          <div class="config-previa" aria-label="Prévia">
+            <span class="eyebrow">Prévia</span>
+            <div class="config-previa-linha"><div class="metric-card config-previa-card"><span class="metric-label">Sobrou no mês</span><div class="metric-value value-positive">R$ 1.827,20</div></div><button class="button button-primary" type="button" tabindex="-1">Botão principal</button></div>
+          </div>
+        </section>
+
+        <!-- ===== USO ===== -->
+        <section class="panel config-aba" id="aba-uso" role="tabpanel" hidden>
+          <div class="panel-header"><div><h2>Preferências de uso</h2><p>Como a Syncrypta abre e se comporta para você.</p></div></div>
+          <div class="config-opcoes">
+            <div class="config-opcao">
+              <div><strong>Página ao entrar</strong><small>A primeira tela depois do login.</small></div>
+              <select class="input config-select" data-pref-select="paginaInicial">
+                <option value="dashboard">Visão geral</option>
+                <option value="movimentacoes">Movimentações</option>
+                <option value="importacao">Importar e revisar</option>
+                <option value="relatorios">Relatórios mensais</option>
+              </select>
+            </div>
+            <div class="config-opcao">
+              <div><strong>Gráfico da Visão geral</strong><small>Formato inicial do gráfico de entradas e saídas.</small></div>
+              <div class="config-segmento" data-pref="graficoPadrao"><button type="button" data-valor="bar">Barras</button><button type="button" data-valor="line">Linhas</button></div>
+            </div>
+            <div class="config-opcao">
+              <div><strong>Balão do assistente</strong><small>O botão "Ajuda" no canto da tela. A página Ajuda continua com o assistente.</small></div>
+              <div class="config-segmento" data-pref="assistente"><button type="button" data-valor="true">Mostrar</button><button type="button" data-valor="false">Esconder</button></div>
+            </div>
+            <div class="config-opcao">
+              <div><strong>Tour de primeiro acesso</strong><small>O passo a passo que mostra onde fica cada coisa.</small></div>
+              <button class="button button-secondary" type="button" onclick="iniciarTour()"><span data-icon="sparkles"></span> Rever o tour</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== SEGURANÇA ===== -->
+        <section class="panel config-aba" id="aba-seguranca" role="tabpanel" hidden>
+          <div class="panel-header"><div><h2>Senha e acesso</h2><p>Use uma senha que você não usa em outros sites.</p></div></div>
+          <form class="form-grid" id="formSenha">
+            <div class="input-group" id="grupoSenhaAtual">
+              <label for="senhaAtual">Senha atual</label>
+              <input class="input" type="password" id="senhaAtual" autocomplete="current-password">
+            </div>
+            <div class="input-group">
+              <label for="novaSenha">Nova senha</label>
+              <input class="input" type="password" id="novaSenha" autocomplete="new-password" placeholder="Mínimo 8 caracteres, com letras e números">
+            </div>
+            <div class="input-group">
+              <label for="confirmarSenha">Repita a nova senha</label>
+              <input class="input" type="password" id="confirmarSenha" autocomplete="new-password">
+            </div>
+            <div class="form-actions"><button class="button button-primary" type="submit"><span data-icon="lock"></span> Trocar senha</button></div>
+          </form>
+          <p class="config-aviso" id="senhaIndisponivel" hidden></p>
+        </section>
+
+        <!-- ===== USUÁRIOS (só a conta master) ===== -->
+        <section class="config-aba" id="aba-usuarios" role="tabpanel" hidden>
+          <div class="metric-grid config-admin-resumo" id="adminResumo"></div>
+
+          <section class="panel">
+            <div class="panel-header"><div><h2>Quem pode fazer o quê</h2><p>A conta master tem acesso total. As outras contas seguem o plano; clientes e visitas só consultam.</p></div></div>
+            <div class="table-wrap"><table class="data-table config-matriz" id="adminMatriz"></table></div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-header">
+              <div><h2>Contas</h2><p>Troque o plano ou suspenda o acesso. Toda mudança fica registrada na auditoria.</p></div>
+            </div>
+            <div class="config-admin-filtros">
+              <div class="search-input"><span data-icon="search"></span><input class="input" id="adminBusca" placeholder="Buscar nome ou e-mail"></div>
+              <select class="input" id="adminFiltroTipo">
+                <option value="">Todos os tipos</option>
+                <option value="master">Master</option>
+                <option value="usuario">Usuários</option>
+                <option value="cliente">Clientes (leitura)</option>
+                <option value="visita">Visita</option>
+              </select>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th>Conta</th><th>Tipo</th><th>Plano</th><th>Último acesso</th><th>Status</th><th>Ação</th></tr></thead>
+                <tbody id="adminTabela"></tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <script src="script.js?v=4.14.0"></script>
+  <script src="cnpj.js?v=4.14.0"></script>
+  <script src="ajuda-conteudo.js?v=4.14.0"></script>
+  <script src="tour.js?v=4.14.0"></script>
+  <script src="helperbot.js?v=4.14.0"></script>
+  <script src="configuracoes.js?v=4.14.0"></script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entrar | Syncrypta</title>
+  <link rel="stylesheet" href="style.css?v=4.14.0">
+  <link rel="stylesheet" href="interface-upgrade.css?v=4.14.0">
+  <link rel="stylesheet" href="visual-refresh.css?v=4.14.0">
+  <link rel="stylesheet" href="ajustes-finais.css?v=4.14.0">
+  <link rel="stylesheet" href="novidades-4-9.css?v=4.14.0">
+  <link rel="icon" type="image/png" href="imagens/logo-icone.png">
+</head>
+
+<body data-page="login">
+
+  <div class="auth-layout">
+
+    <!-- ===================== PAINEL DE APRESENTAÇÃO ===================== -->
+    <section class="auth-showcase">
+      <a class="brand" href="index.html">
+        <span class="brand-mark brand-mark-art"><img src="imagens/logo-icone.png" alt="" width="44" height="44"></span>
+        <span class="brand-copy">
+          <strong>Syncrypta</strong>
+          <small>Contabilidade inteligente</small>
+        </span>
+      </a>
+
+      <div class="auth-showcase-content">
+        <div class="auth-brand-art"><img src="imagens/logo-syncrypta.png" alt="" width="1536" height="1024"></div>
+        <span class="eyebrow">Seu financeiro, legível.</span>
+        <h1>O que entrou. O que saiu. O que vem pela frente.</h1>
+        <p>
+          Entre para acompanhar resultados, importar movimentações,
+          gerar relatórios e testar experiências de plano.
+        </p>
+
+        <div class="auth-benefits">
+          <div class="auth-benefit">
+            <span data-icon="shield"></span> Rotas protegidas
+          </div>
+          <div class="auth-benefit">
+            <span data-icon="dashboard"></span> Painel executivo
+          </div>
+          <div class="auth-benefit">
+            <span data-icon="sparkles"></span> Regras inteligentes
+          </div>
+          <div class="auth-benefit">
+            <span data-icon="receipt"></span> Relatórios gerenciais
+          </div>
+        </div>
+      </div>
+
+      <small style="color:#8A9BB0">
+        Projeto TCC • FIAP School • Syncrypta 4.8
+      </small>
+    </section>
+
+    <!-- ===================== FORMULÁRIO DE LOGIN ===================== -->
+    <main class="auth-form-area">
+      <section class="auth-card">
+        <a class="brand" href="index.html">
+          <span class="brand-mark brand-mark-art"><img src="imagens/logo-icone.png" alt="" width="44" height="44"></span>
+          <span class="brand-copy">
+            <strong>Syncrypta</strong>
+            <small>Área do cliente</small>
+          </span>
+        </a>
+
+        <h2>Bem-vindo de volta</h2>
+        <p>Use sua conta para acessar o ambiente financeiro.</p>
+
+        <form class="auth-form" id="formLogin">
+          <div class="input-group">
+            <label for="emailLogin">E-mail</label>
+            <input class="input" type="email" id="emailLogin" placeholder="voce@empresa.com" required
+              autocomplete="email">
+          </div>
+
+          <div class="input-group">
+            <label for="senhaLogin">Senha</label>
+            <input class="input" type="password" id="senhaLogin" placeholder="Sua senha" required
+              autocomplete="current-password">
+          </div>
+
+          <button class="button button-primary button-full" type="submit">
+            <span data-icon="lock"></span> Entrar com segurança
+          </button>
+        </form>
+        <div class="social-auth-options" aria-label="Outras formas de entrar">
+          <button class="button button-ghost button-full google-login" type="button" id="loginGoogle" disabled
+            title="Configure Firebase ou Google OAuth para ativar">
+            <svg class="google-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="#4285F4" d="M21.35 12.23c0-.72-.06-1.42-.18-2.09H12v3.96h5.24a4.48 4.48 0 0 1-1.94 2.94v2.45h3.14c1.84-1.69 2.91-4.18 2.91-7.26Z" />
+              <path fill="#34A853" d="M12 21.6c2.63 0 4.84-.87 6.45-2.35l-3.14-2.45c-.87.58-1.98.92-3.31.92-2.54 0-4.7-1.72-5.47-4.03H3.28v2.53A9.74 9.74 0 0 0 12 21.6Z" />
+              <path fill="#FBBC05" d="M6.53 13.69a5.86 5.86 0 0 1 0-3.38V7.78H3.28a9.72 9.72 0 0 0 0 8.44l3.25-2.53Z" />
+              <path fill="#EA4335" d="M12 6.28c1.43 0 2.71.49 3.72 1.46l2.79-2.79C16.83 3.41 14.63 2.4 12 2.4a9.74 9.74 0 0 0-8.72 5.38l3.25 2.53C7.3 8 9.46 6.28 12 6.28Z" />
+            </svg>
+            Continuar com Google
+          </button>
+          <small id="estadoProvedores">Escolha sua conta Google. No primeiro acesso, seu plano Básico começará
+            vazio.</small>
+        </div>
+        <p class="auth-footer-link">
+          Ainda não tem conta? <a href="cadastro.html">Criar conta gratuita</a>
+        </p>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="firebase-config.js?v=4.7.1"></script>
+  <script src="script.js?v=4.14.0"></script>
+  <script src="cnpj.js?v=4.14.0"></script>
+  <script src="ajuda-conteudo.js?v=4.14.0"></script>
+  <script src="tour.js?v=4.14.0"></script>
+  <script src="helperbot.js?v=4.14.0"></script>
+</body>
+
+</html>

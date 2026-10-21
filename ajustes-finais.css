@@ -1,0 +1,252 @@
+/* Syncrypta 4.8 · Ajustes finais de layout e paleta azul radiante.
+   Carregado por último em todas as páginas; só corrige e realça, não muda a estrutura. */
+
+/* ---------- Paleta oficial Syncrypta (rodinha de cores) ----------
+   Ciano principal #00D1FF · Azul secundário #007BFF · Roxo destaque #7B3DFF
+   Roxo claro #B14CFF · Branco #FFFFFF · Cinza médio #8A9BB0
+   Cinza escuro #1E2A3A · Preto #0B0F14 · Azul escuro #0A2240 */
+:root {
+  --sc-ciano: #00D1FF;
+  --sc-azul: #007BFF;
+  --sc-roxo: #7B3DFF;
+  --sc-roxo-claro: #B14CFF;
+  --sc-branco: #FFFFFF;
+  --sc-cinza-medio: #8A9BB0;
+  --sc-cinza-escuro: #1E2A3A;
+  --sc-preto: #0B0F14;
+  --sc-azul-escuro: #0A2240;
+
+  --radiante-1: var(--sc-ciano);
+  --radiante-2: var(--sc-azul);
+  --radiante-3: var(--sc-roxo);
+  --radiante-4: var(--sc-roxo-claro);
+  --brilho-azul: 0 0 0 1px rgba(0, 209, 255, .16), 0 12px 32px rgba(0, 123, 255, .20);
+
+  --primary: var(--sc-ciano);
+  --primary-dark: var(--sc-azul);
+  --violet: var(--sc-roxo);
+  --blue: var(--sc-azul);
+  --green: var(--sc-ciano);        /* entradas / positivo */
+  --red: var(--sc-roxo-claro);     /* saídas / negativo */
+  --amber: var(--sc-azul);         /* atenção */
+  --navy: var(--sc-azul-escuro);
+}
+:root.tema-escuro, .tema-escuro {
+  --bg: var(--sc-preto);
+  --surface: #111a26;              /* Cinza escuro sobre Preto */
+  --surface-soft: #152131;
+  --surface-elevated: rgba(17, 26, 38, .96);
+  --text: var(--sc-branco);
+  --text-soft: #c8d2de;
+  --text-muted: var(--sc-cinza-medio);
+  --border: var(--sc-cinza-escuro);
+  --border-strong: #2b3b50;
+  --primary-soft: rgba(0, 209, 255, .12);
+  --violet-soft: rgba(123, 61, 255, .16);
+  --green-soft: rgba(0, 209, 255, .12);
+  --red-soft: rgba(177, 76, 255, .16);
+  --amber-soft: rgba(0, 123, 255, .16);
+  --navy: var(--sc-azul-escuro);
+  --navy-2: #0d2a4d;
+}
+.tema-escuro body, body { background-color: var(--bg); }
+.sidebar { background: linear-gradient(180deg, var(--sc-azul-escuro) 0%, #081a31 45%, var(--sc-preto) 100%) !important; }
+
+/* Valores: entradas em ciano, saídas em roxo claro */
+.value-positive, .tema-escuro .value-positive, [data-theme="dark"] .value-positive { color: var(--sc-ciano) !important; }
+.value-negative, .tema-escuro .value-negative, [data-theme="dark"] .value-negative { color: var(--sc-roxo-claro) !important; }
+
+/* ---------- Cards de valores: número inteiro numa linha só ---------- */
+.metric-grid-five { grid-template-columns: repeat(auto-fit, minmax(178px, 1fr)); }
+.metric-card { container-type: inline-size; }
+.metric-top { position: relative; display: block; }
+.metric-top .metric-label { display: block; padding-right: 48px; min-height: 40px; }
+.metric-top .metric-icon, .metric-top .health-ring, .metric-top > :last-child:not(:first-child) { position: absolute; top: 0; right: 0; }
+.metric-value {
+  white-space: nowrap; overflow-wrap: normal !important;
+  font-size: clamp(1.1rem, 12.5cqi, 1.85rem);
+}
+.metric-card:hover { box-shadow: var(--brilho-azul); }
+
+/* ---------- Valores monetários nas tabelas não quebram ---------- */
+.data-table td.value-positive, .data-table td.value-negative,
+.data-table td:has(> .value-positive), .data-table td:has(> .value-negative) { white-space: nowrap; }
+#relatorioCategorias td:nth-child(2), #relatorioSubcategorias td:last-child { white-space: nowrap; }
+
+/* ---------- Tabelas dentro de painéis estreitos rolam, não cortam ---------- */
+.table-wrap { overflow-x: auto; max-width: 100%; }
+.panel { min-width: 0; }
+
+/* ---------- Seletor de perfil com espaço para o nome ---------- */
+.context-bar .input-group:has(#contextCliente),
+.context-bar .input-group:has(#relatorioCliente) { flex: 1 1 270px; min-width: 250px; }
+#contextCliente, #relatorioCliente { text-overflow: ellipsis; }
+
+/* ---------- Meses abaixo do gráfico: quebram linha em vez de sumir na borda ---------- */
+.chart-month-links { flex-wrap: wrap; overflow-x: visible; }
+
+/* ---------- Gráfico sem dados: recolhido, com aviso curto ---------- */
+.chart-panel.chart-empty { align-self: start; min-height: 0 !important; }
+.chart-panel.chart-empty .chart-container,
+.chart-panel.chart-empty .chart-month-links,
+.chart-panel.chart-empty .chart-visualization-selector,
+.chart-panel.chart-empty .chart-selector { display: none !important; }
+.chart-empty-note {
+  margin-top: 12px; padding: 14px 16px; border-radius: 14px;
+  border: 1px dashed rgba(96, 173, 255, .35);
+  background: rgba(0, 123, 255, .08);
+  color: var(--text-soft, #b0d3f9); font-size: .85rem; line-height: 1.45;
+}
+.chart-empty-note:empty { display: none; }
+
+/* ---------- Nomes de meses: "Outubro de 2026", não "Outubro De 2026" ---------- */
+.projection-month span { text-transform: none; }
+.projection-month span::first-letter { text-transform: uppercase; }
+
+/* ---------- Carteira de clientes: nomes longos não vazam ---------- */
+.portfolio-client { min-width: 0; }
+.portfolio-client .client-top { min-width: 0; }
+.portfolio-client .client-top strong { min-width: 0; overflow-wrap: anywhere; }
+
+/* ---------- Calendário: controles alinhados ---------- */
+.calendar-controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
+.calendar-controls .input-group { margin: 0; }
+
+/* ---------- Toque de brilho azul (cores radiantes) ---------- */
+.button-primary {
+  background: linear-gradient(135deg, var(--radiante-1), var(--radiante-2) 60%, var(--radiante-3));
+  box-shadow: 0 10px 26px rgba(0, 123, 255, .35);
+  border-color: transparent;
+}
+.button-primary:hover { box-shadow: 0 12px 32px rgba(0, 209, 255, .42); filter: brightness(1.06); }
+.page-header h1, .page-title h1 {
+  background: linear-gradient(100deg, #ffffff 0%, #d9f8ff 45%, #8fc5ff 75%, #c2a5ff 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.chart-panel { box-shadow: var(--brilho-azul); }
+
+/* ---------- Celular ---------- */
+@media (max-width: 640px) {
+  .metric-grid-five { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .metric-grid-five > .metric-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .metric-value { font-size: clamp(1rem, 11cqi, 1.5rem); }
+
+  /* Resumo de movimentações: um card por linha, sem cortar o saldo */
+  .smart-suggestion-strip { display: grid !important; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .smart-suggestion-strip > .live-summary-card:first-child { grid-column: 1 / -1; }
+  .live-summary-card { min-width: 0; }
+  .live-summary-card strong { white-space: nowrap; font-size: 1.1rem; }
+
+  /* Calendário: no celular, cor do dia indica saldo; valor aparece ao tocar */
+  .cal-dia small { display: none; }
+  .cal-dia { min-height: 44px; justify-content: center; align-items: center; }
+  .cal-dia.cal-positivo, .cal-dia.cal-negativo { position: relative; }
+  .cal-dia.cal-positivo::after, .cal-dia.cal-negativo::after {
+    content: ""; width: 6px; height: 6px; border-radius: 50%; margin-top: 4px;
+    background: #00d1ff;
+  }
+  .cal-dia.cal-negativo::after { background: var(--radiante-4); }
+
+  .portfolio-grid { grid-template-columns: 1fr !important; }
+
+  /* Filtros de movimentações: grade de 2 colunas, nada escondido na lateral */
+  .filter-bar-extended { display: grid !important; grid-template-columns: 1fr 1fr; gap: 8px; overflow: visible !important; }
+  .filter-bar-extended > .search-input { grid-column: 1 / -1; }
+  .filter-bar-extended > * { min-width: 0 !important; width: 100%; }
+
+  /* Tabela de movimentações vira lista de cartões no celular */
+  table:has(#tabelaMovimentacoes) { min-width: 0 !important; width: 100%; }
+  table:has(#tabelaMovimentacoes) thead { display: none; }
+  #tabelaMovimentacoes tr[data-mov-id] {
+    display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 4px 10px; align-items: center;
+    padding: 12px 6px; border-bottom: 1px solid var(--border);
+  }
+  #tabelaMovimentacoes tr[data-mov-id] > td { display: block; padding: 0 !important; border: 0 !important; min-width: 0; }
+  #tabelaMovimentacoes tr[data-mov-id] > td:nth-child(1) { grid-row: 1 / span 2; }
+  #tabelaMovimentacoes tr[data-mov-id] > td:nth-child(2) { grid-column: 2; }
+  #tabelaMovimentacoes tr[data-mov-id] > td:nth-child(6) { grid-column: 3; grid-row: 1; text-align: right; }
+  #tabelaMovimentacoes tr[data-mov-id] > td:nth-child(3) { grid-column: 2; grid-row: 2; font-size: .8rem; }
+  #tabelaMovimentacoes tr[data-mov-id] > td:nth-child(3) strong, #tabelaMovimentacoes tr[data-mov-id] > td:nth-child(3) small { display: inline; }
+  #tabelaMovimentacoes tr[data-mov-id] > td:nth-child(3) small::before { content: " / "; }
+  #tabelaMovimentacoes tr[data-mov-id] > td:nth-child(8) { grid-column: 3; grid-row: 2; justify-self: end; }
+  #tabelaMovimentacoes tr[data-mov-id] > td:nth-child(7) { grid-column: 2 / -1; grid-row: 3; }
+  #tabelaMovimentacoes tr[data-mov-id] > td:nth-child(4),
+  #tabelaMovimentacoes tr[data-mov-id] > td:nth-child(5) { display: none; }
+  #tabelaMovimentacoes .table-main strong { white-space: normal; overflow: visible; text-overflow: clip; overflow-wrap: anywhere; }
+}
+
+/* ---------- Regras inteligentes agrupadas por categoria ---------- */
+.rules-grid { display: flex !important; flex-direction: column; gap: 22px; }
+.rule-group-head { display: flex; align-items: center; gap: 12px; padding-bottom: 10px; margin-bottom: 12px; border-bottom: 1px solid var(--border); }
+.rule-group-head h3 { font-size: 1.05rem; margin: 0; }
+.rule-group-head .rule-icon { background: linear-gradient(135deg, rgba(0, 209, 255, .18), rgba(123, 61, 255, .22)); color: #7fe8ff; }
+.rule-count { margin-left: auto; font-size: .72rem; color: var(--text-muted); border: 1px solid var(--border); border-radius: 999px; padding: 3px 10px; }
+.rule-group-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+.rule-card h3 { margin-top: 12px; font-size: 1rem; }
+.rule-card h3 .rule-sub { font-weight: 600; color: var(--text-soft); font-size: .88rem; }
+.rule-card p.rule-trigger { font-size: .8rem; }
+.rule-trigger mark { background: rgba(0, 209, 255, .14); color: #8febff; border-radius: 6px; padding: 1px 6px; font-weight: 700; }
+.rule-card-top { justify-content: space-between; }
+
+/* ---------- Relatórios: subcategorias cabem no painel (nome quebra linha, valor inteiro) ---------- */
+table:has(#relatorioSubcategorias) { width: 100% !important; min-width: 0 !important; table-layout: auto; }
+#relatorioSubcategorias td:first-child { white-space: normal !important; overflow-wrap: anywhere; }
+#relatorioSubcategorias td:last-child { overflow: visible; text-overflow: clip; text-align: right; }
+table:has(#relatorioSubcategorias) th:last-child { text-align: right; }
+
+/* ---------- Página inicial: balão flutuante não cobre o nome SYNCRYPTA ---------- */
+@media (min-width: 901px) { .float-card.one { top: 23%; right: -6%; } }
+
+/* ---------- Filtros da biblioteca de regras: busca + categoria + perfil ---------- */
+.rules-filter-bar { display: grid !important; grid-template-columns: minmax(0, 1fr) 230px 230px; gap: 10px; }
+@media (max-width: 760px) {
+  .rules-filter-bar { grid-template-columns: 1fr 1fr; }
+  .rules-filter-bar > .search-input { grid-column: 1 / -1; }
+  .rules-filter-bar > select { min-width: 0; width: 100%; }
+}
+
+/* =====================================================================
+   4.8.2 · Respiro entre blocos (nada colado, nada cortado)
+   ===================================================================== */
+
+/* Movimentações: os três quadradinhos sempre na mesma linha, sem buraco */
+@media (min-width: 641px) {
+  #movimentacoesResumo.smart-suggestion-strip { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  #movimentacoesResumo .live-summary-card { min-width: 0; }
+}
+/* Filtros de movimentações quebram em linhas em vez de cortar o texto */
+.filter-bar-extended { display: grid !important; grid-template-columns: repeat(auto-fill, minmax(175px, 1fr)); gap: 10px; overflow: visible !important; }
+.filter-bar-extended > .search-input { grid-column: span 2; }
+.filter-bar-extended > * { min-width: 0 !important; width: 100%; }
+@media (max-width: 640px) { .filter-bar-extended { grid-template-columns: 1fr 1fr; } .filter-bar-extended > .search-input { grid-column: 1 / -1; } }
+
+/* Auditoria: cards com espaço até a tabela e data sem quebrar feio */
+.audit-stats { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin: 18px 0 22px; }
+.audit-stats article { padding: 16px 18px; min-width: 0; }
+.audit-stats strong { font-size: 1.15rem; overflow-wrap: anywhere; line-height: 1.35; }
+.audit-stats + .panel { margin-top: 0; }
+
+/* Visão geral: "Próximos três meses" e "Alertas" alinhados e com respiro */
+.dashboard-grid { display: grid !important; gap: 20px; align-items: stretch; }
+.dashboard-grid > * { margin-top: 0 !important; }
+@media (max-width: 1100px) { .dashboard-grid { grid-template-columns: minmax(0, 1fr) !important; } }
+.projection-timeline { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 12px; margin-top: 6px; }
+@media (max-width: 560px) { .projection-timeline { grid-template-columns: minmax(0, 1fr) !important; } }
+.projection-month { padding: 16px; min-width: 0; }
+.projection-month strong { margin: 8px 0 6px; font-size: clamp(1rem, 1.3vw, 1.15rem); white-space: nowrap; }
+.projection-month small { line-height: 1.5; }
+#recurringList { margin-top: 20px; }
+#outlierList { margin-top: 6px; }
+
+/* Página inicial: logo com espaço acima do painel ilustrativo */
+.hero-identity { margin: -20px 0 22px !important; }
+@media (min-width: 901px) { .float-card.one { top: auto !important; bottom: 16%; right: -5%; } }
+@media (max-width: 900px) { .hero-identity { margin: 0 0 16px !important; } }
+
+/* Login e cadastro: marca, logo, título e atalhos com respiro */
+.auth-showcase-content { display: flex; flex-direction: column; gap: 0; }
+.auth-brand-art { margin: 26px 0 18px !important; }
+.auth-showcase-content .eyebrow { margin-bottom: 10px; }
+.auth-benefits { margin-top: 26px; gap: 12px !important; }
+.auth-benefit { padding: 14px 16px !important; }
+.auth-showcase-footer, .auth-showcase > small, .auth-showcase > p:last-child { margin-top: 22px; display: block; }

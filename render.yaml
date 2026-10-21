@@ -1,0 +1,20 @@
+# Publicação gratuita da Syncrypta no Render (https://render.com)
+# Um serviço só entrega o site e a API no mesmo endereço, ex.: https://syncrypta.onrender.com
+services:
+  - type: web
+    name: syncrypta
+    runtime: node
+    plan: free
+    buildCommand: cd backend && npm install --no-audit --no-fund
+    # start:demo recria os dados fictícios a cada início (o disco do plano grátis é apagado ao reiniciar)
+    startCommand: cd backend && npm run start:demo
+    healthCheckPath: /api/saude
+    envVars:
+      - key: DEMO_PUBLICO
+        value: "true"
+      - key: JWT_SECRET
+        generateValue: true # o Render cria uma chave secreta aleatória
+      - key: FIREBASE_PROJECT_ID
+        value: syncrypta-firebase # login com Google (opcional); veja PUBLICAR_ONLINE.md
+      - key: GEMINI_API_KEY
+        sync: false # assistente com IA (opcional): o Render pede a chave no painel; ela nunca vai para o GitHub

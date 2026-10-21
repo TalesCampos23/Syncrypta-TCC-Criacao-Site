@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Central de ajuda da Syncrypta: dúvidas frequentes sobre fluxo de caixa, importação de extrato, PF e PJ.">
+  <title>Ajuda | Syncrypta</title>
+  <link rel="stylesheet" href="style.css?v=4.14.0">
+  <link rel="stylesheet" href="interface-upgrade.css?v=4.14.0">
+  <link rel="stylesheet" href="visual-refresh.css?v=4.14.0">
+  <link rel="stylesheet" href="ajustes-finais.css?v=4.14.0">
+  <link rel="stylesheet" href="novidades-4-9.css?v=4.14.0">
+  <link rel="icon" type="image/png" href="imagens/logo-icone.png">
+</head>
+
+<body class="landing-body" data-page="ajuda">
+
+  <!-- ===================== CABEÇALHO (o mesmo da página inicial) ===================== -->
+  <header class="landing-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark brand-mark-art"><img src="imagens/logo-icone.png" alt="" width="44" height="44"></span>
+      <span class="brand-copy">
+        <strong>Syncrypta</strong>
+        <small>Contabilidade inteligente</small>
+      </span>
+    </a>
+
+    <nav class="landing-nav">
+      <a href="index.html">Início</a>
+      <a href="#conversar">Assistente</a>
+      <a href="index.html#campanha">Campanha</a>
+      <a href="index.html#planos">Planos</a>
+      <a href="ajuda.html" aria-current="page">Ajuda</a>
+    </nav>
+
+    <details class="landing-mobile-nav">
+      <summary aria-label="Abrir navegação">Menu <span aria-hidden="true">▾</span></summary>
+      <nav aria-label="Seções do site">
+        <a href="index.html">Início</a>
+        <a href="index.html#campanha">Campanha</a>
+        <a href="index.html#planos">Planos</a>
+        <a href="login.html">Entrar</a>
+        <a href="cadastro.html">Criar conta</a>
+      </nav>
+    </details>
+
+    <div class="landing-actions" id="ajudaAcoesTopo">
+      <a class="button button-ghost" href="login.html">Entrar</a>
+      <a class="button button-primary" href="cadastro.html">Começar agora</a>
+    </div>
+  </header>
+
+  <!-- ===================== BUSCA ===================== -->
+  <section class="ajuda-hero">
+    <span class="eyebrow">Central de ajuda</span>
+    <h1>Como podemos ajudar?</h1>
+    <p>Respostas rápidas sobre o seu caixa, a importação do extrato e a separação entre PF e PJ.</p>
+    <div class="ajuda-busca">
+      <span data-icon="search"></span>
+      <input class="input" id="ajudaBusca" type="search" placeholder="Ex.: importar extrato, dólar, Pix pessoal" aria-label="Buscar na ajuda">
+    </div>
+    <div class="ajuda-grupos" id="ajudaGrupos" aria-label="Assuntos"></div>
+  </section>
+
+  <!-- ===================== CONVERSA COM O ASSISTENTE (4.11) ===================== -->
+  <!-- O mesmo assistente do balão "Ajuda", aberto dentro da página. Com IA ligada no servidor, a conversa é livre. -->
+  <section class="landing-section ajuda-chat-secao" id="conversar">
+    <div class="section-heading">
+      <span class="eyebrow">Assistente Syncrypta</span>
+      <h2>Pergunte do seu jeito</h2>
+      <p id="ajudaChatTexto">Converse sobre o site e sobre organizar o caixa do seu negócio.</p>
+    </div>
+    <div class="ajuda-chat" id="ajudaChat"></div>
+  </section>
+
+  <!-- ===================== DÚVIDAS DOS STORIES ===================== -->
+  <section class="landing-section ajuda-stories">
+    <div class="section-heading">
+      <span class="eyebrow">Caixinha de perguntas</span>
+      <h2>Respondemos nos Stories</h2>
+      <p>As dúvidas que mais chegam pelo Instagram <b>@syncrypta</b> ficam aqui também, com a resposta completa.</p>
+    </div>
+    <div class="stories-cards" id="ajudaStories"></div>
+  </section>
+
+  <!-- ===================== TODAS AS PERGUNTAS ===================== -->
+  <section class="landing-section alt">
+    <div class="ajuda-lista" id="ajudaLista"></div>
+    <p class="ajuda-vazio" id="ajudaVazio" hidden>Nada encontrado com essa palavra. Tente outra ou pergunte ao assistente.</p>
+  </section>
+
+  <!-- ===================== AINDA COM DÚVIDA ===================== -->
+  <section class="landing-cta">
+    <h2>Não achou o que procurava?</h2>
+    <p>Pergunte ao assistente da Syncrypta, no canto da tela, ou veja de novo o passo a passo do primeiro acesso.</p>
+    <div class="ajuda-cta-acoes">
+      <button class="button button-light" type="button" onclick="abrirHelperbot()">Falar com o assistente</button>
+      <a class="button button-ghost" href="dashboard.html?tour=1">Rever o tour</a>
+    </div>
+  </section>
+
+  <footer class="landing-footer">
+    <span>© 2026 Syncrypta • Projeto acadêmico FIAP School</span>
+    <span>Dúvidas fiscais: procure um contador</span>
+  </footer>
+
+  <script src="script.js?v=4.14.0"></script>
+  <script src="cnpj.js?v=4.14.0"></script>
+  <script src="ajuda-conteudo.js?v=4.14.0"></script>
+  <script src="tour.js?v=4.14.0"></script>
+  <script src="helperbot.js?v=4.14.0"></script>
+</body>
+
+</html>

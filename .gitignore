@@ -1,0 +1,6 @@
+backend/node_modules/
+backend/.env
+backend/.google-private.json
+.vscode/
+.DS_Store
+*.log
